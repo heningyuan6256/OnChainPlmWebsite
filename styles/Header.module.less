@@ -14,7 +14,17 @@
       margin-right: 87px;
       :global {
         .ant-menu-horizontal {
-          background: @primaryColor !important;
+          background: @primaryColor;
+          border: none;
+          .ant-menu-item {
+            color: #fff;
+            &-selected {
+              color: #6b94ee;
+            }
+            &::after {
+              display: none;
+            }
+          }
         }
       }
     }
