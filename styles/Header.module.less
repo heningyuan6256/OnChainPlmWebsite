@@ -2,10 +2,21 @@
 .container {
   height: @headerHeight;
   width: 100%;
-  background: #002f56;
+  background: @primaryColor;
   display: flex;
   justify-content: center;
-  .content{
-    
+  align-items: center;
+  .content {
+    .logo {
+      margin-right: 40px;
+    }
+    .menu {
+      margin-right: 87px;
+      :global {
+        .ant-menu-horizontal {
+          background: @primaryColor !important;
+        }
+      }
+    }
   }
 }

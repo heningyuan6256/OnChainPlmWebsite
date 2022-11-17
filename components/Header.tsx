@@ -65,12 +65,16 @@ const Header: FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <Menu
-          onClick={onClick}
-          selectedKeys={[current]}
-          mode="horizontal"
-          items={items}
-        />
+        <div className={styles.logo}></div>
+        <div className={styles.menu}>
+          <Menu
+            onClick={onClick}
+            selectedKeys={[current]}
+            mode="horizontal"
+            items={items}
+          />
+        </div>
+        <div className={styles.help}></div>
       </div>
     </div>
   );
