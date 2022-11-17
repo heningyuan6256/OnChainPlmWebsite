@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
 import styles from "../styles/Header.module.less";
 import { MenuProps, Menu } from "antd";
+import onChainSvg from "../assets/imgs/logo.svg";
+import Image from "next/image";
 
 const Header: FC = () => {
   const [current, setCurrent] = useState("mail");
@@ -64,7 +66,9 @@ const Header: FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.logo}></div>
+        <div className={styles.logo}>
+          <Image height={24} src={onChainSvg} alt="" />
+        </div>
         <div className={styles.menu}>
           <Menu
             onClick={onClick}
