@@ -25,3 +25,8 @@ a {
     background: black;
   }
 }
+
+.icon {
+  fill: currentColor;
+  overflow: hidden;
+}

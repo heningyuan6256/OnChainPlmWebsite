@@ -3,6 +3,7 @@ import styles from "../styles/Header.module.less";
 import { MenuProps, Menu } from "antd";
 import onChainSvg from "../assets/imgs/logo.svg";
 import Image from "next/image";
+import { AliIconFont } from "./icon";
 
 const Header: FC = () => {
   const [current, setCurrent] = useState("mail");
@@ -67,6 +68,12 @@ const Header: FC = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logo}>
+          <div>
+            <AliIconFont
+              type="icon-front-logo"
+              style={{ fontSize: "30px" }}
+            ></AliIconFont>
+          </div>
           <Image height={24} src={onChainSvg} alt="" />
         </div>
         <div className={styles.menu}>
