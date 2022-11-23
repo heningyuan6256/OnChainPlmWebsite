@@ -4,13 +4,14 @@ import { MenuProps, Menu, Button } from "antd";
 import onChainSvg from "../assets/imgs/logo.svg";
 import Image from "next/image";
 import { AliIconFont } from "./icon";
+import classnames from "classnames";
 type ItemProps = {
   label: string;
   key: string;
 };
 
 const Header: FC = () => {
-  const [current, setCurrent] = useState("mail");
+  const [current, setCurrent] = useState("home");
   const onClick: MenuProps["onClick"] = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
@@ -59,7 +60,17 @@ const Header: FC = () => {
     return (
       <div className={styles.Head_Item_Group}>
         {items.map((menuItem) => {
-          return <div className={styles.Item}>{menuItem.label}</div>;
+          return (
+            <div
+              key={menuItem.key}
+              className={classnames({
+                [styles.Item]: true,
+                [styles.active]: menuItem.key === current,
+              })}
+            >
+              {menuItem.label}
+            </div>
+          );
         })}
       </div>
     );

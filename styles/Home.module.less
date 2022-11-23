@@ -12,7 +12,7 @@
   align-items: center;
 } */
 
-.title a {
+/* .title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -54,7 +54,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* max-width: 800px; */
 }
 
 .card {
@@ -90,9 +89,9 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
-}
+} */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
@@ -109,5 +108,48 @@
   }
   .logo img {
     filter: invert(1);
+  }
+} */
+
+.main {
+  .advertise_container {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .advertise_box {
+      height: 362px;
+      width: 660px;
+      &_title {
+        &_1 {
+          background: linear-gradient(
+            270deg,
+            #0563b2 0%,
+            #62b7ff 49%,
+            #ac45ec 100%
+          );
+          -webkit-background-clip: text; /*背景被裁剪到文字*/
+          -webkit-text-fill-color: transparent; /*设置文字的填充颜色*/
+          -webkit-animation: word 3s linear infinite;
+        }
+        &_2 {
+          background: linear-gradient(
+            270deg,
+            #ac45ec 0%,
+            #62b7ff 65%,
+            #0563b2 100%
+          );
+          -webkit-background-clip: text; /*背景被裁剪到文字*/
+          -webkit-text-fill-color: transparent; /*设置文字的填充颜色*/
+          -webkit-animation: word 3s linear infinite;
+        }
+        height: 100%;
+        width: 100%;
+        font-size: 60px;
+        font-family: PingFang SC, PingFang SC-8;
+        font-weight: 700;
+      }
+      user-select: none;
+    }
   }
 }

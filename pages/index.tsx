@@ -1,10 +1,30 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.less";
 import { Button } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
+import { FC } from "react";
+
+// home -- first page
+const AdvertiseBox: FC = (props) => {
+  return (
+    <div className={styles.advertise_container}>
+      <div className={styles.advertise_box}>
+        <div className={styles.advertise_box_title}>
+          <span className={styles.advertise_box_title_1}>
+            新一代超融合云原生技术
+          </span>
+          <br />
+          <span className={styles.advertise_box_title_2}>
+            产品全生命周期赋能平台
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function Home({ posts }: any) {
   return (
@@ -18,7 +38,8 @@ export default function Home({ posts }: any) {
       <Header></Header>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <AdvertiseBox></AdvertiseBox>
+        {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -57,7 +78,7 @@ export default function Home({ posts }: any) {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
       <Footer></Footer>
     </div>
