@@ -5,7 +5,7 @@ module.exports = withAntdLess({
   modifyVars: { "@primary-color": "#15171A", "@ant-prefix": "plm" }, // 修改antd的primary颜色为黑色
   // optional https://github.com/webpack-contrib/css-loader#object
   // cssLoaderOptions: {},
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
   webpack(config) {
     return config;

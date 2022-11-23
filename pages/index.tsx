@@ -4,8 +4,9 @@ import styles from "../styles/Home.module.css";
 import { Button } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { getPosts } from "./api/hello";
 
-export default function Home() {
+export default function Home({ posts }: any) {
   return (
     <div className={styles.container}>
       <Head>
@@ -61,4 +62,17 @@ export default function Home() {
       <Footer></Footer>
     </div>
   );
+}
+
+export async function getStaticProps(context: any) {
+  const posts = await getPosts();
+  if (!posts) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { posts },
+  };
 }
