@@ -2,7 +2,8 @@
 .container {
   height: @headerHeight;
   width: 100%;
-  background: @primaryColor;
+  // background: @primaryColor;
+  border-bottom: 1px solid @borderColor;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +17,7 @@
       align-items: center;
     }
     .menu {
-      margin-right: 87px;
+      margin-right: 60px;
       :global {
         .plm-menu-horizontal {
           background: @primaryColor;
@@ -31,6 +32,26 @@
             }
           }
         }
+      }
+    }
+  }
+
+  // head ItemGroup style
+  .Head_Item_Group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .Item {
+      width: 86px;
+      text-align: center;
+      color: @fontColor;
+      transition: color 0.2s;
+      font-weight: 400;
+      &:hover {
+        cursor: pointer;
+        color: @primaryColor;
+        font-family: PingFang SC, PingFang SC-6;
+        font-weight: 500;
       }
     }
   }

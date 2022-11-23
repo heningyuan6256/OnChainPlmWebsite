@@ -1,9 +1,13 @@
-import { FC, useState } from "react";
+import React, { FC, useMemo, useState } from "react";
 import styles from "../styles/Header.module.less";
-import { MenuProps, Menu } from "antd";
+import { MenuProps, Menu, Button } from "antd";
 import onChainSvg from "../assets/imgs/logo.svg";
 import Image from "next/image";
 import { AliIconFont } from "./icon";
+type ItemProps = {
+  label: string;
+  key: string;
+};
 
 const Header: FC = () => {
   const [current, setCurrent] = useState("mail");
@@ -12,79 +16,79 @@ const Header: FC = () => {
     setCurrent(e.key);
   };
 
-  const items: MenuProps["items"] = [
+  const items: ItemProps[] = [
     {
-      label: "Navigation One",
-      key: "mail",
+      label: "首页",
+      key: "home",
     },
     {
-      label: "Navigation Two",
-      key: "app",
+      label: "平台",
+      key: "platform",
     },
     {
-      label: "Navigation Three - Submenu",
-      key: "SubMenu",
-      // children: [
-      //   {
-      //     type: "group",
-      //     label: "Item 1",
-      //     children: [
-      //       {
-      //         label: "Option 1",
-      //         key: "setting:1",
-      //       },
-      //       {
-      //         label: "Option 2",
-      //         key: "setting:2",
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     type: "group",
-      //     label: "Item 2",
-      //     children: [
-      //       {
-      //         label: "Option 3",
-      //         key: "setting:3",
-      //       },
-      //       {
-      //         label: "Option 4",
-      //         key: "setting:4",
-      //       },
-      //     ],
-      //   },
-      // ],
+      label: "产品",
+      key: "product",
     },
     {
-      label: (
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-          Navigation Four - Link
-        </a>
-      ),
-      key: "alipay",
+      label: "解决方案",
+      key: "solution",
     },
+    {
+      label: "价格",
+      key: "price",
+    },
+    {
+      label: "文档",
+      key: "doc",
+    },
+    {
+      label: "更新日志",
+      key: "log",
+    },
+    // {
+    //   label: (
+    //     <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+    //       Navigation Four - Link
+    //     </a>
+    //   ),
+    //   key: "alipay",
+    // },
   ];
+
+  const HeadMenuGourps = useMemo(() => {
+    return (
+      <div className={styles.Head_Item_Group}>
+        {items.map((menuItem) => {
+          return <div className={styles.Item}>{menuItem.label}</div>;
+        })}
+      </div>
+    );
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <div>
+          {/* <div>
             <AliIconFont
               type="icon-front-logo"
               style={{ fontSize: "30px" }}
             ></AliIconFont>
           </div>
-          <Image height={24} src={onChainSvg} alt="" />
+          <Image height={24} src={onChainSvg} alt="" /> */}
         </div>
         <div className={styles.menu}>
-          <Menu
+          {HeadMenuGourps}
+          {/* <Menu
             onClick={onClick}
             selectedKeys={[current]}
             mode="horizontal"
             items={items}
-          />
+          /> */}
         </div>
-        <div className={styles.help}></div>
+        <div className={styles.help}>
+          <Button>申请试用</Button>
+        </div>
       </div>
     </div>
   );
