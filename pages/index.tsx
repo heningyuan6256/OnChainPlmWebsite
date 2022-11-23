@@ -64,15 +64,15 @@ export default function Home({ posts }: any) {
   );
 }
 
-export async function getStaticProps(context: any) {
-  const posts = await getPosts();
-  if (!posts) {
-    return {
-      notFound: true,
-    };
-  }
+// export async function getStaticProps(context: any) {
+//   const posts = await getPosts();
+//   if (!posts) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
-  return {
-    props: { posts },
-  };
-}
+//   return {
+//     props: { posts },
+//   };
+// }
