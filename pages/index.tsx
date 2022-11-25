@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.less";
-import { Button } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
@@ -54,8 +54,77 @@ const Slideshow: FC = () => {
             {
               source: "/slider1.png",
             },
+            {
+              source: "/slider1.png",
+            },
+            {
+              source: "/slider1.png",
+            },
           ]}
         />
+      </div>
+    </div>
+  );
+};
+
+const CardShow: FC = () => {
+  const data = [
+    {
+      title: "闭环的产品开发方案",
+      content:
+        "为您的产品开发提供一个闭环系统，从需求到生产再到客户的整个回路。",
+    },
+    {
+      title: "加速新产品迭代",
+      content:
+        "帮助您比竞争对手更快的速度创新，将新产品推向市场，获得竞争优势。",
+    },
+    {
+      title: "产品和流程的数字主线",
+      content: "产品从概念到需求、开发、生产和服务的数字主线管理。",
+    },
+    {
+      title: "灵活的产品配置",
+      content:
+        "使用简单的规则配置和产品配置，就可以按照不同行业、业务特点进行快速组装。",
+    },
+    {
+      title: "变更管理",
+      content:
+        "基于DSL的高可定制的工作引擎，简化您的变更管理流程，跟踪产品的演变全过程。",
+    },
+    {
+      title: "提高产品质量",
+      content:
+        "通过跟踪客户问题并将其与工程变更联系起来，控制整个生命周期内产品质量。",
+    },
+    {
+      title: "跨职能协作",
+      content:
+        "实现产品开发过程相关者之间的协作，消除延迟和代价高昂的错误和返工。",
+    },
+    {
+      title: "供应商协作",
+      content: "有效地将采购的部件与BOM相关联，跟踪所有产品的供应商质量指标。",
+    },
+    {
+      title: "提高客户满意度",
+      content:
+        "通过有效管理客户报告的问题和自动化变更管理流程，您可以提高客户满意度。",
+    },
+  ];
+  return (
+    <div className={styles.card_show}>
+      <div className={styles.card_show_title}>为什么选择OnChain</div>
+      <div className={styles.card_show_box}>
+        {data.map((item, index) => {
+          return (
+            <div key={index} className={styles.card_content}>
+              <div className={styles.card_content_title}>{item.title}</div>
+              <div className={styles.card_content_content}>{item.content}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -74,6 +143,9 @@ export default function Home({ posts }: any) {
       <main className={styles.main}>
         <AdvertiseBox></AdvertiseBox>
         <Slideshow></Slideshow>
+        <CardShow></CardShow>
+        <div className={styles.client_show}></div>
+        <div className={styles.apply_show}></div>
       </main>
       <Footer></Footer>
     </div>
