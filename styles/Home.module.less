@@ -115,7 +115,8 @@
   .advertise_container {
     height: 100vh;
     padding-top: 80px;
-    display: block;
+    display: flex;
+    align-items: center;
     .advertise_box {
       position: relative;
       margin: 0 auto;
@@ -205,10 +206,12 @@
 
   .card_show {
     margin-top: 86px;
-    padding: 20px 0px 120px 0px;
+    padding: 20px 0px 20px 0px;
     display: block;
-    // height: 600px;
     width: 100%;
+    background-image: url(/card_background.webp);
+    background-repeat: no-repeat;
+    background-size: auto;
     &_title {
       color: #101926;
       width: 100%;
@@ -237,6 +240,8 @@
           rgba(255, 255, 255, 0.54) 91%,
           rgba(255, 255, 255, 0.35) 91%
         );
+        border-radius: 5px;
+        box-shadow: 0px 6px 11px 0px rgba(202, 210, 218, 0.4);
         &_title {
           font-size: 16px;
           font-family: PingFang SC, PingFang SC-6;
