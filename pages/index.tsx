@@ -24,7 +24,9 @@ const AdvertiseBox: FC = (props) => {
     wowIns.init();
   }, []);
   return (
-    <div className={styles.advertise_container}>
+    <div
+      className={classNames(styles.advertise_container, "wow", "bounceInUp")}
+    >
       <div className={styles.advertise_box}>
         <div className={styles.advertise_box_title}>
           <span className={styles.advertise_box_title_1}>
@@ -52,7 +54,7 @@ const AdvertiseBox: FC = (props) => {
 const Slideshow: FC = () => {
   return (
     <div className={styles.slide_show}>
-      <div className={styles.slide_show_box}>
+      <div className={classNames(styles.slide_show_box, "wow", "slideInLeft")}>
         <AwesomeSlider
           mobileTouch
           organicArrows={false}
@@ -133,7 +135,7 @@ const CardShow: FC = () => {
           return (
             <div
               key={index}
-              className={classNames(styles.card_content, "wow", "bounceInDown")}
+              className={classNames(styles.card_content, "wow", "slideInLeft")}
             >
               <div className={styles.card_content_title}>{item.title}</div>
               <div className={styles.card_content_content}>{item.content}</div>
