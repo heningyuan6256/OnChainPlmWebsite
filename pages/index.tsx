@@ -5,12 +5,24 @@ import { Button, Card, Col, Row } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-
+import classNames from "classnames";
+import "wowjs/css/libs/animate.css";
 // home -- first page
 const AdvertiseBox: FC = (props) => {
+  useEffect(() => {
+    const { WOW } = require("wowjs");
+    const wowIns = new WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 0,
+      mobile: true,
+      live: false,
+    });
+    wowIns.init();
+  }, []);
   return (
     <div className={styles.advertise_container}>
       <div className={styles.advertise_box}>
@@ -119,7 +131,10 @@ const CardShow: FC = () => {
       <div className={styles.card_show_box}>
         {data.map((item, index) => {
           return (
-            <div key={index} className={styles.card_content}>
+            <div
+              key={index}
+              className={classNames(styles.card_content, "wow", "bounceInDown")}
+            >
               <div className={styles.card_content_title}>{item.title}</div>
               <div className={styles.card_content_content}>{item.content}</div>
             </div>
