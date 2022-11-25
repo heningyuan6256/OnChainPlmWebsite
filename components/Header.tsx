@@ -65,7 +65,7 @@ const Header: FC = () => {
               key={menuItem.key}
               className={classnames({
                 [styles.Item]: true,
-                [styles.active]: menuItem.key === current,
+                [styles.Active]: menuItem.key === current,
               })}
             >
               {menuItem.label}

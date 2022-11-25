@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
 import { FC } from "react";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
 
 // home -- first page
 const AdvertiseBox: FC = (props) => {
@@ -35,7 +37,29 @@ const AdvertiseBox: FC = (props) => {
     </div>
   );
 };
-
+const Slideshow: FC = () => {
+  return (
+    <div className={styles.slide_show}>
+      <div className={styles.slide_show_box}>
+        <AwesomeSlider
+          mobileTouch
+          organicArrows={false}
+          media={[
+            {
+              source: "/slider1.png",
+            },
+            {
+              source: "/slider1.png",
+            },
+            {
+              source: "/slider1.png",
+            },
+          ]}
+        />
+      </div>
+    </div>
+  );
+};
 export default function Home({ posts }: any) {
   return (
     <div className={styles.container}>
@@ -49,6 +73,7 @@ export default function Home({ posts }: any) {
 
       <main className={styles.main}>
         <AdvertiseBox></AdvertiseBox>
+        <Slideshow></Slideshow>
       </main>
       <Footer></Footer>
     </div>

@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 200;
+  backdrop-filter: saturate(180%) blur(5px);
   .content {
     display: flex;
     align-items: center;
@@ -47,6 +50,11 @@
       color: @fontColor;
       transition: color 0.2s;
       font-weight: 400;
+      &.Active {
+        color: @primaryColor;
+        font-family: PingFang SC, PingFang SC-6;
+        font-weight: 500;
+      }
       &:hover {
         cursor: pointer;
         color: @primaryColor;

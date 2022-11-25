@@ -13,6 +13,13 @@ body {
 
   font-weight: 400;
 }
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 
 a {
   color: inherit;

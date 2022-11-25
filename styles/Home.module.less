@@ -113,7 +113,7 @@
 
 .main {
   .advertise_container {
-    height: 600px;
+    height: calc(100vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,6 +166,40 @@
         justify-content: center;
         width: 100%;
         gap: 30px;
+      }
+    }
+  }
+  .slide_show {
+    width: 100%;
+    // container
+    height: 623px;
+    padding: 0px 106px 107px 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //box
+    &_box {
+      width: 70%;
+    }
+    :global {
+      .awssld__wrapper {
+        box-shadow: 0px 7px 10px 0px rgba(202, 210, 218, 0.6);
+      }
+      .awssld__bullets {
+        bottom: -66px;
+        button {
+          background: #4b8ef4;
+          opacity: 0.4;
+          width: 12px;
+          height: 12px;
+          border-radius: 3px;
+          box-shadow: 0px 6px 11px 0px rgba(202, 210, 218, 0.4);
+          margin: 5px 15px;
+        }
+        .awssld__bullets--active {
+          transform: rotate(45deg);
+          opacity: 1;
+        }
       }
     }
   }
