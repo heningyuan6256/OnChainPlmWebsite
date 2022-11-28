@@ -1,50 +1,49 @@
 import React, { FC, useMemo, useState } from "react";
 import styles from "../styles/Header.module.less";
 import { MenuProps, Menu, Button } from "antd";
-import onChainSvg from "../assets/imgs/logo.svg";
-import Image from "next/image";
-import { AliIconFont } from "./icon";
 import classnames from "classnames";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Router from "next/router";
 type ItemProps = {
   label: string;
   key: string;
 };
 
 const Header: FC = () => {
-  const [current, setCurrent] = useState("home");
-  const onClick: MenuProps["onClick"] = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
-  };
+  const router = useRouter();
+  const [current, setCurrent] = useState(
+    router.asPath === "/" ? "/home" : router.asPath
+  );
 
   const items: ItemProps[] = [
     {
       label: "首页",
-      key: "home",
+      key: "/home",
     },
     {
       label: "平台",
-      key: "platform",
+      key: "/platform",
     },
     {
       label: "产品",
-      key: "product",
+      key: "/product",
     },
     {
       label: "解决方案",
-      key: "solution",
+      key: "/solution",
     },
     {
       label: "价格",
-      key: "price",
+      key: "/price",
     },
     {
       label: "文档",
-      key: "doc",
+      key: "/doc",
     },
     {
       label: "更新日志",
-      key: "log",
+      key: "/log",
     },
     // {
     //   label: (
@@ -67,6 +66,11 @@ const Header: FC = () => {
                 [styles.Item]: true,
                 [styles.Active]: menuItem.key === current,
               })}
+              onClick={() => {
+                const routePath = menuItem.key === "/home" ? "/" : menuItem.key;
+                setCurrent(routePath);
+                Router.push(routePath);
+              }}
             >
               {menuItem.label}
             </div>
@@ -74,29 +78,13 @@ const Header: FC = () => {
         })}
       </div>
     );
-  }, []);
+  }, [current]);
 
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.logo}>
-          {/* <div>
-            <AliIconFont
-              type="icon-front-logo"
-              style={{ fontSize: "30px" }}
-            ></AliIconFont>
-          </div>
-          <Image height={24} src={onChainSvg} alt="" /> */}
-        </div>
-        <div className={styles.menu}>
-          {HeadMenuGourps}
-          {/* <Menu
-            onClick={onClick}
-            selectedKeys={[current]}
-            mode="horizontal"
-            items={items}
-          /> */}
-        </div>
+        <div className={styles.logo}></div>
+        <div className={styles.menu}>{HeadMenuGourps}</div>
         <div className={styles.help}>
           <Button>申请试用</Button>
         </div>
