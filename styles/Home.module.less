@@ -110,7 +110,7 @@
     filter: invert(1);
   }
 } */
-
+@import "./Constant.module.less";
 .main {
   .advertise_container {
     height: 100vh;
@@ -289,5 +289,24 @@
   .apply_show {
     width: 100%;
     height: 288px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #008bff;
+    &_title {
+      font-size: 36px;
+      font-family: PingFangSC, PingFangSC-Semibold;
+      font-weight: 600;
+      color: #fff;
+      line-height: 50px;
+    }
+    &_sub_title {
+      font-size: 18px;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      line-height: 25px;
+      color: #fff;
+      margin-top: 10px;
+    }
   }
 }

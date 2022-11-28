@@ -162,7 +162,21 @@ export default function Home({ posts }: any) {
         <Slideshow></Slideshow>
         <CardShow></CardShow>
         <div className={styles.client_show}></div>
-        <div className={styles.apply_show}></div>
+        <div className={styles.apply_show}>
+          <div></div>
+          <div>
+            <div className={styles.apply_show_title}>
+              提供一站式产品全生命周期解决方案
+            </div>
+            <div className={styles.apply_show_sub_title}>
+              请填写您的资讯内容，我们将在第一时间与您联系
+            </div>
+          </div>
+          <div>
+            <Button>申请试用</Button>
+          </div>
+          <div></div>
+        </div>
       </main>
       <Footer></Footer>
     </div>
