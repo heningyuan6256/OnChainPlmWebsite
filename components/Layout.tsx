@@ -18,6 +18,7 @@ const Layout: FC<LayoutProps> = (props) => {
       live: false,
     });
     wowIns.init();
+    return () => {};
   }, []);
   return (
     <Fragment>
