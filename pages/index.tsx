@@ -11,19 +11,9 @@ import "react-awesome-slider/dist/styles.css";
 import classNames from "classnames";
 import "wowjs/css/libs/animate.css";
 import Layout from "../components/Layout";
+import { ScrollAnimateClass } from "../constant";
 // home -- first page
 const AdvertiseBox: FC = (props) => {
-  useEffect(() => {
-    const { WOW } = require("wowjs");
-    const wowIns = new WOW({
-      boxClass: "wow",
-      animateClass: "animated",
-      offset: 0,
-      mobile: true,
-      live: false,
-    });
-    wowIns.init();
-  }, []);
   return (
     <div className={classNames(styles.advertise_container)}>
       <div className={styles.advertise_box}>
@@ -53,7 +43,13 @@ const AdvertiseBox: FC = (props) => {
 const Slideshow: FC = () => {
   return (
     <div className={styles.slide_show}>
-      <div className={classNames(styles.slide_show_box, "wow", "slideInLeft")}>
+      <div
+        className={classNames(
+          styles.slide_show_box,
+          ScrollAnimateClass,
+          "slideInLeft"
+        )}
+      >
         <AwesomeSlider
           mobileTouch
           organicArrows={false}
@@ -134,7 +130,11 @@ const CardShow: FC = () => {
           return (
             <div
               key={index}
-              className={classNames(styles.card_content, "wow", "slideInLeft")}
+              className={classNames(
+                styles.card_content,
+                ScrollAnimateClass,
+                "slideInLeft"
+              )}
             >
               <div className={styles.card_content_title}>{item.title}</div>
               <div className={styles.card_content_content}>{item.content}</div>

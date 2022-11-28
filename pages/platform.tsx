@@ -1,6 +1,8 @@
+import classNames from "classnames";
 import Head from "next/head";
 import { FC, Fragment } from "react";
 import Layout from "../components/Layout";
+import { ScrollAnimateClass } from "../constant";
 import styles from "../styles/Platform.module.less";
 
 interface RenderContent {
@@ -18,7 +20,12 @@ const RenderContent: FC<RenderContent> = (props) => {
       style={{ background: isOdd ? "#fff" : "#f5f5f5" }}
     >
       <div
-        className={styles.platform_item}
+        className={classNames({
+          [styles.platform_item]: true,
+          [ScrollAnimateClass]: true,
+          ["slideInLeft"]: isOdd,
+          ["slideInRight"]: !isOdd,
+        })}
         style={{ flexDirection: isOdd ? "row" : "row-reverse" }}
       >
         <div>
