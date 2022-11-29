@@ -190,7 +190,7 @@ export default () => {
       </Head>
       <Layout>
         <main className={styles.main}>
-          <div style={{ height: "80px" }}></div>
+          <div style={{ height: "97px" }}></div>
           {data.map((item, index) => (
             <RenderContent
               key={index}
