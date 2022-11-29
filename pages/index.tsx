@@ -16,11 +16,11 @@ import { ScrollAnimateClass } from "../constant";
 const AdvertiseBox: FC = (props) => {
   const leftAnimateConfig = {
     [ScrollAnimateClass]: true,
-    slideInLeft: true,
+    ["fadeInLeft"]: true,
   };
   const rightAnimateConfig = {
     [ScrollAnimateClass]: true,
-    slideInRight: true,
+    ["fadeInRight"]: true,
   };
   return (
     <div className={classNames(styles.advertise_container)}>
@@ -337,7 +337,7 @@ const CardShow: FC = () => {
               className={classNames(
                 styles.card_content,
                 ScrollAnimateClass,
-                "slideInLeft"
+                "slideInDown"
               )}
             >
               <div className={styles.card_content_title}>{item.title}</div>
