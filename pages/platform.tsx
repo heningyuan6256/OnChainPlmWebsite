@@ -75,7 +75,10 @@ const RenderContent: FC<RenderContent> = (props) => {
           </div>
         </div>
         <div
-          className={styles.platform_item_img}
+          className={classNames({
+            [styles.platform_item_img]: true,
+            ...animateMap,
+          })}
           style={{
             backgroundImage: `url(${props.img})`,
           }}
