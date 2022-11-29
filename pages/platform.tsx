@@ -15,30 +15,50 @@ interface RenderContent {
 
 const RenderContent: FC<RenderContent> = (props) => {
   const isOdd = props.contentKey % 2 === 0;
+  const animateMap = {
+    [ScrollAnimateClass]: true,
+    ["fadeInLeft"]: isOdd,
+    ["fadeInRight"]: !isOdd,
+  };
   return (
     <div
       className={styles.platform_container}
       style={{
-        background: isOdd
-          ? "linear-gradient(180deg,#edf3fd, #ffffff)"
-          : "#fff",
+        background: isOdd ? "linear-gradient(180deg,#ffffff 16%, #edf3fd)" : "#fff",
       }}
     >
       <div
         className={classNames({
           [styles.platform_item]: true,
-          [ScrollAnimateClass]: true,
-          ["fadeInLeft"]: isOdd,
-          ["fadeInRight"]: !isOdd,
+          ...animateMap,
         })}
-        style={{ flexDirection: isOdd ? "row" : "row-reverse" }}
+        style={{ flexDirection: !isOdd ? "row" : "row-reverse" }}
       >
         <div>
-          <div className={styles.platform_item_title}>{props.title}</div>
-          <div className={styles.platform_item_content}>{props.content}</div>
+          <div
+            className={classNames({
+              [styles.platform_item_title]: true,
+              ...animateMap,
+            })}
+          >
+            {props.title}
+          </div>
+          <div
+            className={classNames({
+              [styles.platform_item_content]: true,
+              ...animateMap,
+            })}
+          >
+            {props.content}
+          </div>
           <div>
             {(props.list || []).map((item) => (
-              <div className={styles.platform_item_list}>
+              <div
+                className={classNames({
+                  [styles.platform_item_list]: true,
+                  ...animateMap,
+                })}
+              >
                 <div className={styles.platform_item_list_suffix}></div> {item}
               </div>
             ))}
