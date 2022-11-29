@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Footer.module.less";
 import { FC } from "react";
 import { Button, Input } from "antd";
+import { AliIconFont } from "./icon";
 
 const Footer: FC = () => {
   return (
@@ -57,6 +58,20 @@ const Footer: FC = () => {
           <div className={styles.row}>postmaster@dahaikj.com</div>
           <div className={styles.title} style={{ margin: "32px 0px 30px 0px" }}>
             联系我们
+          </div>
+          <div style={{ display: "flex", gap: "20px" }}>
+            <AliIconFont
+              type="icon-front-weixin"
+              style={{ color: "#528ff4", fontSize: "24px" }}
+            ></AliIconFont>
+            <AliIconFont
+              type="icon-front-qq"
+              style={{ fontSize: "24px" }}
+            ></AliIconFont>
+            <AliIconFont
+              type="icon-front-github"
+              style={{ fontSize: "24px" }}
+            ></AliIconFont>
           </div>
         </div>
       </div>
