@@ -80,7 +80,7 @@ const Header: FC = () => {
         })}
       </div>
     );
-  }, [current]);
+  }, [current, items]);
 
   return (
     <div className={styles.container}>

@@ -89,7 +89,7 @@ const RenderContent: FC<RenderContent> = (props) => {
   );
 };
 
-export default () => {
+const platform: FC = () => {
   const data = [
     {
       img: "/平台-云原生赋能平台插图.webp",
@@ -204,3 +204,5 @@ export default () => {
     </Fragment>
   );
 };
+
+export default platform;
