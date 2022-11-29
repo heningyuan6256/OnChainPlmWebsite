@@ -74,10 +74,20 @@
       color: @fontColor;
       transition: color 0.2s;
       font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 97px;
       &.Active {
         color: @primaryColor;
         font-family: PingFang SC, PingFang SC-6;
         font-weight: 500;
+
+        background: linear-gradient(#101926, #101926) no-repeat;
+        background-size: 100% 2px;
+        background-position: 0 95px;
+        cursor: pointer;
+        color: @primaryColor;
       }
       &:hover {
         cursor: pointer;
