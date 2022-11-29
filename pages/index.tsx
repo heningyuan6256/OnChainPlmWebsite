@@ -274,7 +274,7 @@ const Slideshow: FC = () => {
       className={classNames(
         styles.slide_show
         // ScrollAnimateClass,
-        // "slideInLeft"
+        // "fadeInUp"
       )}
     >
       <div className={styles.slide_show_box}>
