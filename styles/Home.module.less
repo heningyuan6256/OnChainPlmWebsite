@@ -115,9 +115,19 @@
   .advertise_container {
     &_floatIcon_content {
       position: absolute;
-      height: 100vh;
+      height: 535px;
       width: 100%;
       z-index: -1;
+      display: block;
+      padding: 0px 40px;
+      display: flex;
+      justify-content: space-between;
+      &_left{
+        padding-left: 147px
+      };
+      &_right{
+        padding-right: 147px
+      }
     }
     height: 100vh;
     padding-top: @headerHeight;

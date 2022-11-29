@@ -17,7 +17,34 @@ const AdvertiseBox: FC = (props) => {
   return (
     <div className={classNames(styles.advertise_container)}>
       <div className={styles.advertise_container_floatIcon_content}>
-        
+        <div className={styles.advertise_container_floatIcon_content_left}>
+          <Image
+            src={"/techLogo/front-1.svg"}
+            alt=""
+            width={60}
+            height={60}
+          ></Image>
+          <Image
+            src={"/techLogo/front-1.svg"}
+            alt=""
+            width={60}
+            height={60}
+          ></Image>
+        </div>
+        <div className={styles.advertise_container_floatIcon_content_right}>
+          <Image
+            src={"/techLogo/front-1.svg"}
+            alt=""
+            width={60}
+            height={60}
+          ></Image>
+          <Image
+            src={"/techLogo/front-1.svg"}
+            alt=""
+            width={60}
+            height={60}
+          ></Image>
+        </div>
       </div>
       <div className={styles.advertise_box}>
         <div className={styles.advertise_box_title}>
