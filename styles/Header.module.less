@@ -9,7 +9,7 @@
   align-items: center;
   position: fixed;
   z-index: 200;
-  background: hsla(0,0%,100%,.8);
+  background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: saturate(180%) blur(5px);
   .content {
     display: flex;
@@ -17,8 +17,30 @@
     .logo {
       margin-right: 69px;
       display: flex;
-      gap: 10px;
+      // gap: 10px;
+      flex-direction: column;
       align-items: center;
+      .img {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+      .txt {
+        background: linear-gradient(
+          268deg,
+          #0270f2 0%,
+          #56b4da 42%,
+          #d45de7 100%
+        );
+        font-size: 18px;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: 500;
+        color: #101926;
+        line-height: 25px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: word--CSMQ 3s linear infinite;
+      }
     }
     .menu {
       margin-right: 60px;

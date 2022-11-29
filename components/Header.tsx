@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Router from "next/router";
 import Image from "next/image";
+import { AliIconFont } from "./icon";
 type ItemProps = {
   label: string;
   key: string;
@@ -85,12 +86,27 @@ const Header: FC = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <Image
+          <div className={styles.img}>
+            <Image
+              src={"/front-plm logo.svg"}
+              height={30}
+              width={25}
+              alt=""
+            ></Image>
+            <Image
+              src={"/front-onchain new2.svg"}
+              height={19}
+              width={94}
+              alt=""
+            ></Image>
+          </div>
+          <div className={styles.txt}>PLM On Cloud</div>
+          {/* <Image
             src={"/导航栏-官网logo.webp"}
             alt=""
             width={124}
             height={53}
-          ></Image>
+          ></Image> */}
         </div>
         <div className={styles.menu}>{HeadMenuGourps}</div>
         <div className={styles.help}>
