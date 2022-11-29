@@ -16,6 +16,9 @@ import { ScrollAnimateClass } from "../constant";
 const AdvertiseBox: FC = (props) => {
   return (
     <div className={classNames(styles.advertise_container)}>
+      <div className={styles.advertise_container_floatIcon_content}>
+        
+      </div>
       <div className={styles.advertise_box}>
         <div className={styles.advertise_box_title}>
           <span className={styles.advertise_box_title_1}>
