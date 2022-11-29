@@ -9,7 +9,6 @@ import { FC, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import classNames from "classnames";
-import "wowjs/css/libs/animate.css";
 import Layout from "../components/Layout";
 import { ScrollAnimateClass } from "../constant";
 // home -- first page

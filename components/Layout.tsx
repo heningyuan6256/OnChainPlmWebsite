@@ -2,13 +2,14 @@ import { FC, Fragment, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { ScrollAnimateClass } from "../constant";
+import { useMount } from "../hooks/useMount";
 
 export interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: FC<LayoutProps> = (props) => {
-  useEffect(() => {
+  useMount(() => {
     const { WOW } = require("wowjs");
     const wowIns = new WOW({
       boxClass: ScrollAnimateClass,
@@ -19,7 +20,7 @@ const Layout: FC<LayoutProps> = (props) => {
     });
     wowIns.init();
     return () => {};
-  }, []);
+  });
   return (
     <Fragment>
       <Header></Header>

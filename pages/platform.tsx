@@ -10,6 +10,7 @@ interface RenderContent {
   content?: string;
   title?: string;
   contentKey: number;
+  list?: string[];
 }
 
 const RenderContent: FC<RenderContent> = (props) => {
@@ -17,20 +18,31 @@ const RenderContent: FC<RenderContent> = (props) => {
   return (
     <div
       className={styles.platform_container}
-      style={{ background: isOdd ? "#fff" : "#f5f5f5" }}
+      style={{
+        background: isOdd
+          ? "linear-gradient(180deg,#edf3fd, #ffffff)"
+          : "#fff",
+      }}
     >
       <div
         className={classNames({
           [styles.platform_item]: true,
           [ScrollAnimateClass]: true,
-          ["slideInLeft"]: isOdd,
-          ["slideInRight"]: !isOdd,
+          ["fadeInLeft"]: isOdd,
+          ["fadeInRight"]: !isOdd,
         })}
         style={{ flexDirection: isOdd ? "row" : "row-reverse" }}
       >
         <div>
           <div className={styles.platform_item_title}>{props.title}</div>
           <div className={styles.platform_item_content}>{props.content}</div>
+          <div>
+            {(props.list || []).map((item) => (
+              <div className={styles.platform_item_list}>
+                <div className={styles.platform_item_list_suffix}></div> {item}
+              </div>
+            ))}
+          </div>
         </div>
         <div className={styles.platform_item_img}></div>
       </div>
@@ -51,41 +63,80 @@ export default () => {
       content:
         "OnChainPLM平台采用多租户和微服务架构构建。您的产品数据与爱他用户产品数据相互隔离、安全可靠，并且应用程序由于分布式和优化的系统资源高效运行。",
       title: "多租户体系架构",
+      list: [
+        "数据隔离带来安全性",
+        "提高性能可扩展性",
+        "系统的高可用性并减少停机时间",
+        "自动备份保证数据的零丢失",
+        "低成本投入和提高企业自身回报率",
+      ],
     },
     {
       img: "",
       content:
         "我们的平台提供多层数据安全和访问控制。借助对象权限和精细权限模型，您可以更好地控制谁可以访问数据以及他们可以做什么。",
       title: "安全和访问控制",
+      list: [
+        "精细粒度的访问控制模型",
+        "用户、角色、特权和权限的控制",
+        "内置对象和属性的访问控制",
+        "精细粒度的访问控制模型",
+        "基于角色的应用程序配置",
+      ],
     },
     {
       img: "",
       content:
         "通过OnChain企业社交功能，方便连接产品团队中的各个角色人员，增强他们之间的协作。团队可以共享关键信息，如文档、文件、图纸等以及上下文研发数据。",
       title: "多维度企业协同",
+      list: [
+        "应用程序中的上下文对话",
+        "通过消息共享文件和图纸等研发数据",
+        "鼓励您的客户直接提供反馈",
+        "自动备份保证数据的零丢失",
+        "与钉钉、飞书等程序做无缝集成",
+      ],
     },
     {
       img: "",
       content: "通过我们的移动应用程序，您的团队可以从任何地方访问产品数据。",
       title: "企业移动",
+      list: [
+        "随时随地在任何设备上安全地访问数据",
+        "基于角色的移动应用程序",
+        "推送通知和自动更新",
+        "直接从您的移动设备参与对话",
+      ],
     },
     {
       img: "",
       content:
         "定制化应用程序开发，方便为您的产品团队提供更好的用户体验。OnChainPLM平台提供低代码应用程序开发，基于Serverless技术，无需编写大量代码即可构建自定义应用程序。",
       title: "低代码开发",
+      list: ["自定义数据模型和扩展字段", "自定义视图或扩展现有视图"],
     },
     {
       img: "",
       content:
         "平台内置 OPEN API 可以在安全环境中创建和访问数据。这些API可以通过不同的编程语言轻松访问。",
       title: "系统开放能力",
+      list: [
+        "高安全性的REST API",
+        "带有示例的详细文档",
+        "便捷的第三方系统集成",
+        "直接从您的移动设备参与对话",
+      ],
     },
     {
       img: "",
       content:
         "基于云原生超融合技术的应用架构，PLM 相关业务最终交付物会完全遵循云原生应用交付件标准去交付客户应用体。分钟级时间完成支撑工业级的云原生应用部过程。",
       title: "应用分发与交付能力",
+      list: [
+        "优化容器镜像大小，降低镜像传输成本",
+        "实现高效的个性化交付",
+        "生态集成",
+      ],
     },
   ];
   return (
@@ -96,7 +147,7 @@ export default () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <div>
+        <main className={styles.main}>
           <div style={{ height: "80px" }}></div>
           {data.map((item, index) => (
             <RenderContent
@@ -105,7 +156,7 @@ export default () => {
               contentKey={index}
             ></RenderContent>
           ))}
-        </div>
+        </main>
       </Layout>
     </Fragment>
   );
