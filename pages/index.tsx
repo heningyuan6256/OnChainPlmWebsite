@@ -46,6 +46,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -70,6 +73,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -96,6 +102,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -119,6 +128,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -144,6 +156,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -166,7 +181,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                preview={false}
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -192,6 +209,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
@@ -214,6 +234,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
+                preview={{
+                  visible: false,
+                }}
                 // width={72}
                 //height={72}
               ></Image>
