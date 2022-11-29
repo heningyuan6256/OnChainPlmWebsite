@@ -88,13 +88,13 @@ const Header: FC = () => {
         <div className={styles.logo}>
           <div className={styles.img}>
             <Image
-              src={"/front-plm logo.svg"}
+              src={"/front-plmlogo.svg"}
               height={30}
               width={25}
               alt=""
             ></Image>
             <Image
-              src={"/front-onchain new2.svg"}
+              src={"/front-onchainnew2.svg"}
               height={19}
               width={94}
               alt=""
