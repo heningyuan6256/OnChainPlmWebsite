@@ -23,9 +23,17 @@ const RenderContent: FC<RenderContent> = (props) => {
   return (
     <div
       className={styles.platform_container}
-      style={{
-        background: isOdd ? "linear-gradient(180deg,#ffffff 16%, #edf3fd)" : "#fff",
-      }}
+      style={
+        isOdd
+          ? {
+              background: "linear-gradient(180deg,#ffffff 16%, #edf3fd)",
+            }
+          : {
+              backgroundImage: "url(/平台-波浪A.webp)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "auto",
+            }
+      }
     >
       <div
         className={classNames({
@@ -52,8 +60,9 @@ const RenderContent: FC<RenderContent> = (props) => {
             {props.content}
           </div>
           <div>
-            {(props.list || []).map((item) => (
+            {(props.list || []).map((item, index) => (
               <div
+                key={index}
                 className={classNames({
                   [styles.platform_item_list]: true,
                   ...animateMap,
@@ -64,7 +73,12 @@ const RenderContent: FC<RenderContent> = (props) => {
             ))}
           </div>
         </div>
-        <div className={styles.platform_item_img}></div>
+        <div
+          className={styles.platform_item_img}
+          style={{
+            backgroundImage: `url(${props.img})`,
+          }}
+        ></div>
       </div>
     </div>
   );
@@ -73,13 +87,13 @@ const RenderContent: FC<RenderContent> = (props) => {
 export default () => {
   const data = [
     {
-      img: "",
+      img: "/平台-云原生赋能平台插图.webp",
       content:
         "OnChainPLM基于云原生技术，来构建新一代工业软件技术底座“产品全生命周期赋能平台”，帮助企业高效管理其产品开发流程，并比竞争对手更快地将产品推向市场。您的整个产品数据在云端安全可靠，可从任何地方任何设备进行访问。",
       title: "云原生赋能平台",
     },
     {
-      img: "",
+      img: "/平台-多租户体系架构插图.webp",
       content:
         "OnChainPLM平台采用多租户和微服务架构构建。您的产品数据与爱他用户产品数据相互隔离、安全可靠，并且应用程序由于分布式和优化的系统资源高效运行。",
       title: "多租户体系架构",
@@ -92,7 +106,7 @@ export default () => {
       ],
     },
     {
-      img: "",
+      img: "/平台-安全和访问控制插图.webp",
       content:
         "我们的平台提供多层数据安全和访问控制。借助对象权限和精细权限模型，您可以更好地控制谁可以访问数据以及他们可以做什么。",
       title: "安全和访问控制",
@@ -105,7 +119,7 @@ export default () => {
       ],
     },
     {
-      img: "",
+      img: "/平台-多维度企业协同插图.webp",
       content:
         "通过OnChain企业社交功能，方便连接产品团队中的各个角色人员，增强他们之间的协作。团队可以共享关键信息，如文档、文件、图纸等以及上下文研发数据。",
       title: "多维度企业协同",
@@ -118,7 +132,7 @@ export default () => {
       ],
     },
     {
-      img: "",
+      img: "/平台-企业移动插图.webp",
       content: "通过我们的移动应用程序，您的团队可以从任何地方访问产品数据。",
       title: "企业移动",
       list: [
@@ -129,14 +143,14 @@ export default () => {
       ],
     },
     {
-      img: "",
+      img: "/平台-低代码开发插图.webp",
       content:
         "定制化应用程序开发，方便为您的产品团队提供更好的用户体验。OnChainPLM平台提供低代码应用程序开发，基于Serverless技术，无需编写大量代码即可构建自定义应用程序。",
       title: "低代码开发",
       list: ["自定义数据模型和扩展字段", "自定义视图或扩展现有视图"],
     },
     {
-      img: "",
+      img: "/平台-系统开放能力插图.webp",
       content:
         "平台内置 OPEN API 可以在安全环境中创建和访问数据。这些API可以通过不同的编程语言轻松访问。",
       title: "系统开放能力",
@@ -148,7 +162,7 @@ export default () => {
       ],
     },
     {
-      img: "",
+      img: "/平台-应用分发与交付插图.webp",
       content:
         "基于云原生超融合技术的应用架构，PLM 相关业务最终交付物会完全遵循云原生应用交付件标准去交付客户应用体。分钟级时间完成支撑工业级的云原生应用部过程。",
       title: "应用分发与交付能力",
