@@ -14,14 +14,25 @@ import Layout from "../components/Layout";
 import { ScrollAnimateClass } from "../constant";
 // home -- first page
 const AdvertiseBox: FC = (props) => {
+  const leftAnimateConfig = {
+    [ScrollAnimateClass]: true,
+    slideInLeft: true,
+  };
+  const rightAnimateConfig = {
+    [ScrollAnimateClass]: true,
+    slideInRight: true,
+  };
   return (
     <div className={classNames(styles.advertise_container)}>
       <div className={styles.advertise_container_floatIcon_content}>
+        {/* 第一行 */}
         <div className={styles.advertise_container_floatIcon_content_wrapper1}>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper1_left
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper1_left]:
+                true,
+              ...leftAnimateConfig,
+            })}
           >
             {[
               "front-1.svg",
@@ -41,9 +52,11 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper1_right
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper1_right]:
+                true,
+              ...rightAnimateConfig,
+            })}
           >
             {[
               "front-7.svg",
@@ -63,11 +76,14 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
         </div>
+        {/* 第二行 */}
         <div className={styles.advertise_container_floatIcon_content_wrapper2}>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper2_left
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper2_left]:
+                true,
+              ...leftAnimateConfig,
+            })}
           >
             {[
               "front-13.svg",
@@ -86,9 +102,11 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper2_right
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper2_right]:
+                true,
+              ...rightAnimateConfig,
+            })}
           >
             {[
               "front-18.svg",
@@ -107,11 +125,14 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
         </div>
+        {/* // 第三行 */}
         <div className={styles.advertise_container_floatIcon_content_wrapper3}>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper3_left
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper3_left]:
+                true,
+              ...leftAnimateConfig,
+            })}
           >
             {[
               "front-18.svg",
@@ -129,9 +150,11 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper3_right
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper3_right]:
+                true,
+              ...rightAnimateConfig,
+            })}
           >
             {[
               "front-22.svg",
@@ -149,11 +172,14 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
         </div>
+        {/* 第四行 */}
         <div className={styles.advertise_container_floatIcon_content_wrapper4}>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper4_left
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper4_left]:
+                true,
+              ...leftAnimateConfig,
+            })}
           >
             {[
               "front-26.svg",
@@ -171,9 +197,11 @@ const AdvertiseBox: FC = (props) => {
             ))}
           </div>
           <div
-            className={
-              styles.advertise_container_floatIcon_content_wrapper4_right
-            }
+            className={classNames({
+              [styles.advertise_container_floatIcon_content_wrapper4_right]:
+                true,
+              ...rightAnimateConfig,
+            })}
           >
             {[
               "front-30.svg",
