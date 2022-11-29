@@ -11,6 +11,7 @@ interface RenderContent {
   title?: string;
   contentKey: number;
   list?: string[];
+  backgroundImage?: string;
 }
 
 const RenderContent: FC<RenderContent> = (props) => {
@@ -29,7 +30,7 @@ const RenderContent: FC<RenderContent> = (props) => {
               background: "linear-gradient(180deg,#ffffff 16%, #edf3fd)",
             }
           : {
-              backgroundImage: "url(/平台-波浪A.webp)",
+              backgroundImage: `url(${props.backgroundImage})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "auto",
             }
@@ -97,6 +98,7 @@ export default () => {
       content:
         "OnChainPLM平台采用多租户和微服务架构构建。您的产品数据与爱他用户产品数据相互隔离、安全可靠，并且应用程序由于分布式和优化的系统资源高效运行。",
       title: "多租户体系架构",
+      backgroundImage: "/平台-波浪A.webp",
       list: [
         "数据隔离带来安全性",
         "提高性能可扩展性",
@@ -123,6 +125,7 @@ export default () => {
       content:
         "通过OnChain企业社交功能，方便连接产品团队中的各个角色人员，增强他们之间的协作。团队可以共享关键信息，如文档、文件、图纸等以及上下文研发数据。",
       title: "多维度企业协同",
+      backgroundImage: "/平台-波浪B.webp",
       list: [
         "应用程序中的上下文对话",
         "通过消息共享文件和图纸等研发数据",
@@ -147,6 +150,7 @@ export default () => {
       content:
         "定制化应用程序开发，方便为您的产品团队提供更好的用户体验。OnChainPLM平台提供低代码应用程序开发，基于Serverless技术，无需编写大量代码即可构建自定义应用程序。",
       title: "低代码开发",
+      backgroundImage: "/平台-波浪C.webp",
       list: ["自定义数据模型和扩展字段", "自定义视图或扩展现有视图"],
     },
     {
@@ -166,6 +170,7 @@ export default () => {
       content:
         "基于云原生超融合技术的应用架构，PLM 相关业务最终交付物会完全遵循云原生应用交付件标准去交付客户应用体。分钟级时间完成支撑工业级的云原生应用部过程。",
       title: "应用分发与交付能力",
+      backgroundImage: "/平台-波浪D.webp",
       list: [
         "优化容器镜像大小，降低镜像传输成本",
         "实现高效的个性化交付",
