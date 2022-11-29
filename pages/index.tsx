@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "../styles/Home.module.less";
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Image } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
@@ -46,8 +46,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -70,8 +70,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -96,8 +96,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -119,8 +119,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -144,8 +144,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -166,8 +166,9 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                preview={false}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -191,8 +192,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>
@@ -213,8 +214,8 @@ const AdvertiseBox: FC = (props) => {
                 key={index}
                 src={`/techLogo/${item}`}
                 alt=""
-                width={72}
-                height={72}
+                // width={72}
+                //height={72}
               ></Image>
             ))}
           </div>

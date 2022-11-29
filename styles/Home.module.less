@@ -113,7 +113,18 @@
 @import "./Constant.module.less";
 .main {
   .advertise_container {
+    @media screen and (max-width: 1680px) {
+      &_floatIcon_content {
+        margin-top: 150px;
+      }
+    }
     &_floatIcon_content {
+      :global {
+        .plm-image {
+          height: 72px;
+          width: 72px;
+        }
+      }
       position: absolute;
       height: 535px;
       width: 100%;
@@ -195,6 +206,26 @@
           gap: 72px;
           display: flex;
           flex-direction: row-reverse;
+        }
+      }
+      @media screen and (max-width: 1680px) {
+        :global {
+          .plm-image {
+            height: 32px;
+            width: 32px;
+          }
+        }
+        &_wrapper1 {
+          margin-bottom: 107px;
+        }
+        &_wrapper2 {
+          margin-bottom: 107px;
+        }
+        &_wrapper3 {
+          margin-bottom: 107px;
+        }
+        &_wrapper4 {
+          margin-bottom: 107px;
         }
       }
     }
