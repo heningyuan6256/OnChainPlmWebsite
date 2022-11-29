@@ -33,6 +33,7 @@ const RenderContent: FC<RenderContent> = (props) => {
               backgroundImage: `url(${props.backgroundImage})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "auto",
+              backgroundPosition: "center",
             }
       }
     >

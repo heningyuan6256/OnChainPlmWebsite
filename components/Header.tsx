@@ -5,6 +5,7 @@ import classnames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Router from "next/router";
+import Image from "next/image";
 type ItemProps = {
   label: string;
   key: string;
@@ -83,7 +84,14 @@ const Header: FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.logo}></div>
+        <div className={styles.logo}>
+          <Image
+            src={"/导航栏-官网logo.webp"}
+            alt=""
+            width={124}
+            height={53}
+          ></Image>
+        </div>
         <div className={styles.menu}>{HeadMenuGourps}</div>
         <div className={styles.help}>
           <Button>申请试用</Button>
