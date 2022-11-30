@@ -2,7 +2,7 @@
 
 import Layout from "../../components/Layout";
 import { getSinglePost, getPosts } from "../api/hello";
-
+import Styles from "../../styles/Cms.module.less";
 // PostPage page component
 const PostPage = (props: any) => {
   // Render post title and content in the page from props
@@ -11,7 +11,10 @@ const PostPage = (props: any) => {
       <div style={{ height: "97px" }}></div>
       <div style={{ margin: "0 auto", width: "1080px" }}>
         <h1>{props.post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: props.post.html }} />
+        <div
+          className={Styles.cms}
+          dangerouslySetInnerHTML={{ __html: props.post.html }}
+        />
       </div>
     </Layout>
   );
