@@ -50,3 +50,38 @@ a {
   width: 130px;
   height: 36px !important;
 }
+
+figure img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+pre {
+  background: #15171a;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px -2px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
+  color: #e5eff5;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  overflow: auto;
+  padding: 16px 20px;
+}
+
+:not(pre) > code {
+  background: #f0f6f9;
+  border: 1px solid #e1eaef;
+  border-radius: 0.25em;
+  color: #15171a;
+  font-size: 0.9em;
+  font-weight: 400 !important;
+  line-height: 1em;
+  padding: 0.15em 0.4em;
+  vertical-align: middle;
+}
+
+a {
+  color: #2b2626 !important;
+  text-decoration: underline !important;
+  word-break: break-word !important;
+}

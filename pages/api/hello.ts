@@ -6,8 +6,8 @@ type Data = {
   name: string;
 };
 const api = new GhostContentAPI({
-  url: "https://demo.ghost.io",
-  key: "22444f78447824223cefc48062",
+  url: "http://192.168.0.104:2368",
+  key: "42481cab4c7cf3d0c069f5daa7",
   version: "v5.0",
 });
 
@@ -24,6 +24,16 @@ export async function getPosts() {
       limit: "all",
     })
     .catch((err) => {
+      console.error(err);
+    });
+}
+
+export async function getSinglePost(postSlug: string) {
+  return await api.posts
+    .read({
+      slug: postSlug
+    })
+    .catch(err => {
       console.error(err);
     });
 }

@@ -12,6 +12,7 @@ import classNames from "classnames";
 // import "wowjs/css/libs/animate.css";
 import Layout from "../components/Layout";
 import { ScrollAnimateClass } from "../constant";
+import Link from "next/link";
 // home -- first page
 const AdvertiseBox: FC = (props) => {
   const leftAnimateConfig = {
@@ -409,15 +410,3 @@ export default function Home({ posts }: any) {
   );
 }
 
-// export async function getStaticProps(context: any) {
-//   const posts = await getPosts();
-//   if (!posts) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-
-//   return {
-//     props: { posts },
-//   };
-// }
