@@ -6,7 +6,7 @@ import { getPosts } from "./api/hello";
 const product: FC = ({ posts }: any) => {
   return (
     <Layout>
-      <div style={{ height: "97px" }}></div>
+      <div style={{ height: "80px" }}></div>
       <div>
         <ul>
           {posts.map((post: any) => (

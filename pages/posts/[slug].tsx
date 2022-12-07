@@ -8,7 +8,7 @@ const PostPage = (props: any) => {
   // Render post title and content in the page from props
   return (
     <Layout>
-      <div style={{ height: "97px" }}></div>
+      <div style={{ height: "80px" }}></div>
       <div style={{ margin: "0 auto", width: "1080px" }}>
         <h1>{props.post.title}</h1>
         <div
