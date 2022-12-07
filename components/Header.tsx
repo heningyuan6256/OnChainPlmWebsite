@@ -111,7 +111,7 @@ const Header: FC = () => {
         </div>
         <div className={styles.menu}>{HeadMenuGourps}</div>
         <div className={styles.help}>
-          <Button>申请试用</Button>
+          <Button type="primary">申请试用</Button>
         </div>
       </div>
     </div>
