@@ -10,23 +10,20 @@ const Footer: FC = () => {
       <div className={styles.box}>
         <div className={styles.box1}>
           <Image
-            style={{ marginBottom: "30px" }}
+            style={{ marginBottom: "40px" }}
             src={"/front-onchain.svg"}
             alt=""
             width={90}
             height={18}
           ></Image>
-          <div className={styles.title}>
-            我们每天都在变得更好，输入邮箱对我们进行订阅，不要错过我们的重要消息
-          </div>
           <div className={styles.sub_title}>
-            新版本、新特性、指南、案例研究、开发者大会等消息
+            输入邮箱对我们进行订阅，不要错过我们的重要消息！
           </div>
           <div className={styles.email}>
             <Input placeholder="请输入您的邮箱"></Input>
           </div>
           <div className={styles.button}>
-            <Button>订阅邮件</Button>
+            <Button type="primary">订阅</Button>
           </div>
           <div className={styles.reference}>
             <span>
