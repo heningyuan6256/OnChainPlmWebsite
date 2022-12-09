@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import Image from "next/image";
 import styles from "../styles/Home.module.less";
-import { Button, Card, Col, Row, Image } from "antd";
+import { Button, Card, Col, Row, Image, Collapse } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
@@ -578,6 +578,75 @@ const WorldShow: FC = (props) => {
     </div>
   );
 };
+
+const ProblemShow: FC = () => {
+  const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+
+  const data = [
+    {
+      key: "1",
+      title: "OnChain PLM 能做什么",
+      result:
+        "问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答",
+    },
+    {
+      key: "2",
+      title: "OnChain PLM 能做什么",
+      result:
+        "问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答",
+    },
+    {
+      key: "3",
+      title: "OnChain PLM 能做什么",
+      result:
+        "问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答问题的解答解答",
+    },
+  ];
+  const { Panel } = Collapse;
+  return (
+    <div className={styles.problem_show}>
+      <div className={styles.box}>
+        <div className={styles.list}>
+          <div className={styles.title}>常见问题</div>
+
+          <Collapse
+            accordion
+            expandIcon={({ isActive }) =>
+              isActive ? (
+                <AliIconFont
+                  style={{ color: "#000000", fontSize: "20px" }}
+                  type="icon-front-minus"
+                ></AliIconFont>
+              ) : (
+                <AliIconFont
+                  style={{ color: "#000000", fontSize: "20px" }}
+                  type="icon-front-plus"
+                ></AliIconFont>
+              )
+            }
+            defaultActiveKey={["1"]}
+            ghost
+          >
+            {data.map((item) => {
+              return (
+                <Panel header={item.title} key={item.key}>
+                  <p>{item.result}</p>
+                </Panel>
+              );
+            })}
+          </Collapse>
+        </div>
+        <div className={styles.figure}>
+          <Image preview={false} src="/首页常见问题插图.webp"></Image>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default function Home({ posts }: any) {
   return (
     <div className={styles.container}>
@@ -595,20 +664,20 @@ export default function Home({ posts }: any) {
           {/* <div className={styles.client_show}></div> */}
           <PriceShow></PriceShow>
           <WorldShow></WorldShow>
+          <ProblemShow></ProblemShow>
           <div className={styles.apply_show}>
-            <div></div>
-            <div>
+            <div className={styles.box}>
+              <div className={styles.apply_show_title}>提供一站式</div>
               <div className={styles.apply_show_title}>
-                提供一站式产品全生命周期解决方案
+                产品全生命周期解决方案
               </div>
               <div className={styles.apply_show_sub_title}>
                 请填写您的资讯内容，我们将在第一时间与您联系
               </div>
+              <div>
+                <Button>申请试用</Button>
+              </div>
             </div>
-            <div>
-              <Button>申请试用</Button>
-            </div>
-            <div></div>
           </div>
         </main>
       </Layout>
