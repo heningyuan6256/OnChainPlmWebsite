@@ -504,6 +504,7 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
+    margin-bottom: 300px;
     .title {
       font-size: 36px;
       font-family: PingFang SC, PingFang SC-8;
@@ -596,6 +597,62 @@
             gap: 10px;
           }
         }
+      }
+    }
+  }
+
+  .word_show {
+    padding-bottom: 200px;
+    border-bottom: 1px solid #d9e4f4;
+    .word_container {
+      background-image: url(/首页世界地图.webp);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+      height: 600px;
+      width: 1168px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding-top: 128px;
+      align-items: center;
+      &_box {
+        width: 324px;
+        height: 180px;
+        margin-bottom: 12px;
+        &_title1 {
+          font-size: 36px;
+          font-family: PingFang SC, PingFang SC-8;
+          font-weight: 700;
+          text-align: center;
+          color: #1d293b;
+          line-height: 60px;
+        }
+        &_title2 {
+          font-size: 36px;
+          font-family: PingFang SC, PingFang SC-8;
+          font-weight: 700;
+          text-align: center;
+          color: @primaryColor;
+          line-height: 60px;
+        }
+        &_title3 {
+          font-size: 36px;
+          font-family: PingFang SC, PingFang SC-8;
+          font-weight: 700;
+          text-align: center;
+          color: @primaryColor;
+          line-height: 60px;
+        }
+      }
+      .word_container_subTitle {
+        font-size: 14px;
+        font-family: PingFang SC, PingFang SC-5;
+        font-weight: 400;
+        text-align: left;
+        color: #a7b3c5;
+        line-height: 18px;
+        margin-bottom: 30px;
       }
     }
   }

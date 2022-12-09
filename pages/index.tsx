@@ -452,6 +452,8 @@ const PriceShow: FC = (props) => {
         "项目内多仓库",
         "导入外部仓库",
         "分支权限管理",
+        "支持 Git ＆ SVN",
+        "Web IDE 在线编码",
       ],
     },
     {
@@ -471,6 +473,11 @@ const PriceShow: FC = (props) => {
         "项目内多仓库",
         "导入外部仓库",
         "分支权限管理",
+        "支持 Git ＆ SVN",
+        "Web IDE 在线编码",
+        "工单支持",
+        "商用级高可用性",
+        "专属企业微信服务群",
       ],
     },
     {
@@ -490,6 +497,13 @@ const PriceShow: FC = (props) => {
         "项目内多仓库",
         "导入外部仓库",
         "分支权限管理",
+        "支持 Git ＆ SVN",
+        "Web IDE 在线编码",
+        "工单支持",
+        "商用级高可用性",
+        "专属企业微信服务群",
+        "一对一顾问服务",
+        "DevOps 成熟度评估",
       ],
     },
   ];
@@ -544,6 +558,26 @@ const PriceShow: FC = (props) => {
     </div>
   );
 };
+
+const WorldShow: FC = (props) => {
+  return (
+    <div className={styles.word_show}>
+      <div className={styles.word_container}>
+        <div className={styles.word_container_box}>
+          <div className={styles.word_container_box_title1}>我们为您提供</div>
+          <div className={styles.word_container_box_title2}>
+            一站式产品生命周期
+          </div>
+          <div className={styles.word_container_box_title3}>解决方案</div>
+        </div>
+        <div className={styles.word_container_subTitle}>
+          请填写您的资讯内容，我们将在第一时间与您联系
+        </div>
+        <Button type="primary">申请试用</Button>
+      </div>
+    </div>
+  );
+};
 export default function Home({ posts }: any) {
   return (
     <div className={styles.container}>
@@ -560,6 +594,7 @@ export default function Home({ posts }: any) {
           <CardShow></CardShow>
           {/* <div className={styles.client_show}></div> */}
           <PriceShow></PriceShow>
+          <WorldShow></WorldShow>
           <div className={styles.apply_show}>
             <div></div>
             <div>
