@@ -89,29 +89,18 @@ const Header: FC = () => {
         <div className={styles.logo}>
           <div className={styles.img}>
             <Image
-              src={"/front-plmlogo.svg"}
+              src={"/官网导航栏logo.svg"}
               height={30}
-              width={25}
-              alt=""
-            ></Image>
-            <Image
-              src={"/front-onchainnew2.svg"}
-              height={19}
-              width={94}
+              width={108}
               alt=""
             ></Image>
           </div>
-          <div className={styles.txt}>PLM On Cloud</div>
-          {/* <Image
-            src={"/导航栏-官网logo.webp"}
-            alt=""
-            width={124}
-            height={53}
-          ></Image> */}
         </div>
         <div className={styles.menu}>{HeadMenuGourps}</div>
         <div className={styles.help}>
-          <Button type="primary">申请试用</Button>
+          <Button style={{ width: "112px", height: "36px" }} type="primary">
+            申请试用
+          </Button>
         </div>
       </div>
     </div>

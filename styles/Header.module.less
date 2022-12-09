@@ -4,7 +4,7 @@
   height: @headerHeight;
   width: 100%;
   // background: @primaryColor;
-  border-bottom: 1px solid @borderColor;
+  // border-bottom: 1px solid @borderColor;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +13,13 @@
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: saturate(180%) blur(5px);
   user-select: none;
+  margin: 0 auto;
   .content {
+    width: 1168px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     .logo {
-      margin-right: 162px;
       display: flex;
       // gap: 10px;
       flex-direction: column;
@@ -45,7 +47,6 @@
       }
     }
     .menu {
-      margin-right: 162px;
       :global {
         .plm-menu-horizontal {
           background: @primaryColor;
@@ -96,6 +97,28 @@
         font-family: PingFang SC, PingFang SC-6;
         font-weight: 500;
       }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
     }
   }
 }
