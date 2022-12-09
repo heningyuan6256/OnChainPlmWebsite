@@ -278,6 +278,12 @@ const Slideshow: FC = () => {
         // "fadeInUp"
       )}
     >
+      <div className={styles.title}>
+        一些<span>很屌</span>的描述
+      </div>
+      <div className={styles.sub_title}>
+        一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
+      </div>
       <div className={styles.slide_show_box}>
         <AwesomeSlider
           mobileTouch
