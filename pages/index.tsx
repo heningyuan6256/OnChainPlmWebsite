@@ -285,7 +285,8 @@ const Slideshow: FC = () => {
         一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
       </div>
       <div className={styles.slide_show_box}>
-        <AwesomeSlider
+        <Image preview={false} src="/首页电脑.webp"></Image>
+        {/* <AwesomeSlider
           mobileTouch
           organicArrows={false}
           media={[
@@ -305,7 +306,7 @@ const Slideshow: FC = () => {
               source: "/slider1.png",
             },
           ]}
-        />
+        /> */}
       </div>
     </div>
   );
@@ -359,7 +360,14 @@ const CardShow: FC = () => {
   ];
   return (
     <div className={styles.card_show}>
-      <div className={styles.card_show_title}>为什么选择OnChain</div>
+      <div className={styles.card_show_title}>
+        <div className={styles.title}>
+          一些<span>很屌</span>的描述
+        </div>
+      </div>
+      <div className={styles.sub_title}>
+        一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
+      </div>
       <div className={styles.card_show_box}>
         {data.map((item, index) => {
           return (
