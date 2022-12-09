@@ -247,22 +247,22 @@ const AdvertiseBox: FC = (props) => {
       </div>
       <div className={styles.advertise_box}>
         <div className={styles.advertise_box_title}>
-          <span className={styles.advertise_box_title_1}>
-            新一代超融合云原生技术
-          </span>
+          <span className={styles.advertise_box_title_1}>新一代</span>
           <br />
-          <span className={styles.advertise_box_title_2}>
+          <span className={styles.advertise_box_title_2}>超融合云原生技术</span>
+          <br />
+          <span className={styles.advertise_box_title_3}>
             产品全生命周期赋能平台
           </span>
         </div>
         <div className={styles.advertise_box_sub_title}>
-          简化产品开发并在云中快速交付创新产品
+          简化产品开发并在云中快速交付创新产品,探索OnChain云原生产
         </div>
         <div className={styles.advertise_box_sub_title}>
-          探索OnChain云原生产品生命周期管理(PLM)解决方案的优势
+          品生命周期管理(PLM)解决方案的优势
         </div>
         <div className={styles.advertise_box_sub_button_group}>
-          <Button>申请试用</Button>
+          <Button type="primary">申请试用</Button>
           <Button>视频介绍</Button>
         </div>
       </div>
@@ -409,4 +409,3 @@ export default function Home({ posts }: any) {
     </div>
   );
 }
-
