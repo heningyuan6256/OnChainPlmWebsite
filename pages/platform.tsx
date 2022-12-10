@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import classNames from "classnames";
 import Head from "next/head";
 import { FC, Fragment } from "react";
@@ -15,7 +16,7 @@ interface RenderContent {
 }
 
 const RenderContent: FC<RenderContent> = (props) => {
-  const isOdd = props.contentKey % 2 === 0;
+  const isOdd = props.contentKey % 2 !== 0;
   const animateMap = {
     [ScrollAnimateClass]: true,
     ["fadeInLeft"]: isOdd,
@@ -80,10 +81,18 @@ const RenderContent: FC<RenderContent> = (props) => {
             [styles.platform_item_img]: true,
             ...animateMap,
           })}
-          style={{
-            backgroundImage: `url(${props.img})`,
-          }}
-        ></div>
+          // style={{
+          //   backgroundImage: `url(${props.img})`,
+          // }}
+        >
+          <Image preview={false} src="/platform/云原生A.webp"></Image>
+          <div className={styles.absoluteImg_1}>
+            <Image preview={false} src="/platform/云原生B.webp"></Image>
+          </div>
+          <div className={styles.absoluteImg_2}>
+            <Image preview={false} src="/platform/云原生C.webp"></Image>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -92,7 +101,7 @@ const RenderContent: FC<RenderContent> = (props) => {
 const platform: FC = () => {
   const data = [
     {
-      img: "/平台-云原生赋能平台插图.webp",
+      img: "/platform/云原生A.webp",
       content:
         "OnChainPLM基于云原生技术，来构建新一代工业软件技术底座“产品全生命周期赋能平台”，帮助企业高效管理其产品开发流程，并比竞争对手更快地将产品推向市场。您的整个产品数据在云端安全可靠，可从任何地方任何设备进行访问。",
       title: "云原生赋能平台",
@@ -192,6 +201,7 @@ const platform: FC = () => {
       <Layout>
         <main className={styles.main}>
           <div style={{ height: "80px" }}></div>
+          <div style={{ height: "536px" }}></div>
           {data.map((item, index) => (
             <RenderContent
               key={index}
