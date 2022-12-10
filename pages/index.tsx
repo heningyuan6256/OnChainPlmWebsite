@@ -516,7 +516,15 @@ const PriceShow: FC = (props) => {
     figure,
   }: PriceShowProps) => {
     return (
-      <div key={key} className={styles.card}>
+      <div
+        key={key}
+        className={classNames({
+          [styles.card]: true,
+          [ScrollAnimateClass]: true,
+          "animate__fadeInUp": true,
+        })}
+        data-wow-delay={`${0 + Number(key) * 0.1}s`}
+      >
         <div className={styles.figure}>
           <Image preview={false} src={`/${figure}`}></Image>
         </div>
@@ -665,7 +673,6 @@ export default function Home({ posts }: any) {
           <PriceShow></PriceShow>
           <WorldShow></WorldShow>
           <ProblemShow></ProblemShow>
-         
         </main>
       </Layout>
     </div>
