@@ -521,7 +521,7 @@ const PriceShow: FC = (props) => {
         className={classNames({
           [styles.card]: true,
           [ScrollAnimateClass]: true,
-          "animate__fadeInUp": true,
+          animate__fadeInUp: true,
         })}
         data-wow-delay={`${0 + Number(key) * 0.1}s`}
       >

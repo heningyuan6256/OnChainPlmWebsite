@@ -64,3 +64,27 @@ a {
   height: 44px;
   width: 140px;
 }
+
+/*Animation*/
+@-webkit-keyframes jump {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0, 15px, 0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0, 15px, 0);
+  }
+}
+
+.jump:not(.animate__animated) {
+  transform-origin: 0;
+  -webkit-animation: jump 0.5s linear alternate infinite;
+  animation: jump 0.5s linear alternate infinite;
+}

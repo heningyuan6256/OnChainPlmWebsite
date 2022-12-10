@@ -81,6 +81,7 @@ const RenderContent: FC<RenderContent> = (props) => {
               [styles.absoluteImg_1]: true,
               [ScrollAnimateClass]: true,
               ["animate__fadeInRight"]: true,
+              ["jump"]: true,
             })}
             data-wow-duration="2s"
           >
@@ -91,6 +92,7 @@ const RenderContent: FC<RenderContent> = (props) => {
               [styles.absoluteImg_2]: true,
               [ScrollAnimateClass]: true,
               ["animate__fadeInDown"]: true,
+              ["jump"]: true,
             })}
             data-wow-duration="2s"
           >
