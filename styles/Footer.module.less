@@ -9,10 +9,11 @@
     margin: 0 auto;
     max-width: 1168px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     // justify-content: space-between;
     .box1 {
-      width: 320px;
+      min-width: 520px;
+      border-right: 1px solid #d9e4f4;
       .title {
         font-size: 16px;
         font-family: PingFang SC, PingFang SC-6;
@@ -74,11 +75,15 @@
         }
       }
     }
+    @media (max-width: 1560px) {
+      .box1{
+        min-width: 431px;
+      }
+    }
     .box_container {
       display: flex;
       flex-direction: column;
-      margin-left: 91px;
-      border-left: 1px solid #d9e4f4;
+      // margin-left: 91px;
       justify-content: space-between;
       padding-left: 88px;
     }
