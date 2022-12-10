@@ -19,25 +19,11 @@ const RenderContent: FC<RenderContent> = (props) => {
   const isOdd = props.contentKey % 2 !== 0;
   const animateMap = {
     [ScrollAnimateClass]: true,
-    ["fadeInLeft"]: isOdd,
-    ["fadeInRight"]: !isOdd,
+    ["animate__fadeInLeft"]: isOdd,
+    ["animate__fadeInRight"]: !isOdd,
   };
   return (
-    <div
-      className={styles.platform_container}
-      // style={
-      //   isOdd
-      //     ? {
-      //         background: "linear-gradient(180deg,#ffffff 16%, #edf3fd)",
-      //       }
-      //     : {
-      //         backgroundImage: `url(${props.backgroundImage})`,
-      //         backgroundRepeat: "no-repeat",
-      //         backgroundSize: "auto",
-      //         backgroundPosition: "center",
-      //       }
-      // }
-    >
+    <div className={styles.platform_container}>
       <div
         className={classNames({
           [styles.platform_item]: true,
@@ -45,7 +31,7 @@ const RenderContent: FC<RenderContent> = (props) => {
         })}
         style={{ flexDirection: !isOdd ? "row" : "row-reverse" }}
       >
-        <div>
+        <div style={{ minWidth: "430px" }}>
           <div
             className={classNames({
               [styles.platform_item_title]: true,
@@ -90,9 +76,9 @@ const RenderContent: FC<RenderContent> = (props) => {
             className={classNames({
               [styles.absoluteImg_1]: true,
               [ScrollAnimateClass]: true,
-              ["slideInRight"]: true,
+              ["animate__fadeInRight"]: true,
             })}
-            data-wow-duration="1s"
+            data-wow-duration="2s"
           >
             <Image preview={false} src="/platform/云原生B.webp"></Image>
           </div>
@@ -100,9 +86,9 @@ const RenderContent: FC<RenderContent> = (props) => {
             className={classNames({
               [styles.absoluteImg_2]: true,
               [ScrollAnimateClass]: true,
-              ["slideInTop"]: true,
+              ["animate__fadeInDown"]: true,
             })}
-            data-wow-duration="1s"
+            data-wow-duration="2s"
           >
             <Image preview={false} src="/platform/云原生C.webp"></Image>
           </div>
@@ -215,7 +201,16 @@ const platform: FC = () => {
       <Layout>
         <main className={styles.main}>
           <div style={{ height: "80px" }}></div>
-          <div style={{ height: "536px" }}></div>
+          <div
+            style={{
+              height: "536px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Image preview={false} src="/产品新插图.webp"></Image>
+          </div>
           {data.map((item, index) => (
             <RenderContent
               key={index}

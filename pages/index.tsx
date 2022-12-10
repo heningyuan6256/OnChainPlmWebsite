@@ -18,11 +18,11 @@ import { AliIconFont } from "@components/icon";
 const AdvertiseBox: FC = (props) => {
   const leftAnimateConfig = {
     [ScrollAnimateClass]: true,
-    ["fadeInLeft"]: true,
+    ["animate__fadeInLeft"]: true,
   };
   const rightAnimateConfig = {
     [ScrollAnimateClass]: true,
-    ["fadeInRight"]: true,
+    ["animate__fadeInRight"]: true,
   };
   return (
     <div className={classNames(styles.advertise_container)}>
@@ -386,7 +386,7 @@ const CardShow: FC = () => {
               className={classNames(
                 styles.card_content,
                 ScrollAnimateClass,
-                "slideInDown"
+                "animate__fadeInUp"
               )}
             >
               <AliIconFont

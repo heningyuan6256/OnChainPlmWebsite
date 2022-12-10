@@ -13,7 +13,7 @@ const Layout: FC<LayoutProps> = (props) => {
     const { WOW } = require("wowjs");
     const wowIns = new WOW({
       boxClass: ScrollAnimateClass,
-      animateClass: "animated",
+      animateClass: "animate__animated",
       offset: 0,
       mobile: true,
       live: false,
