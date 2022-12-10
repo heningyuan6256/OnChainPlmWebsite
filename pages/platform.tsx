@@ -86,10 +86,24 @@ const RenderContent: FC<RenderContent> = (props) => {
           // }}
         >
           <Image preview={false} src="/platform/云原生A.webp"></Image>
-          <div className={styles.absoluteImg_1}>
+          <div
+            className={classNames({
+              [styles.absoluteImg_1]: true,
+              [ScrollAnimateClass]: true,
+              ["slideInRight"]: true,
+            })}
+            data-wow-duration="1s"
+          >
             <Image preview={false} src="/platform/云原生B.webp"></Image>
           </div>
-          <div className={styles.absoluteImg_2}>
+          <div
+            className={classNames({
+              [styles.absoluteImg_2]: true,
+              [ScrollAnimateClass]: true,
+              ["slideInTop"]: true,
+            })}
+            data-wow-duration="1s"
+          >
             <Image preview={false} src="/platform/云原生C.webp"></Image>
           </div>
         </div>
