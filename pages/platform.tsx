@@ -9,7 +9,7 @@ import styles from "../styles/Platform.module.less";
 interface RenderContent {
   img?: string;
   content?: string;
-  title?: string;
+  title: string;
   contentKey: number;
   list?: string[];
   backgroundImage?: string;
@@ -21,6 +21,67 @@ const RenderContent: FC<RenderContent> = (props) => {
     [ScrollAnimateClass]: true,
     ["animate__fadeInLeft"]: isOdd,
     ["animate__fadeInRight"]: !isOdd,
+  };
+  const renderImage = (props: { title: string }) => {
+    const { title } = props;
+    switch (title) {
+      case "云原生赋能平台":
+        return (
+          <Fragment>
+            <Image className={styles.relativeImg1} preview={false} src="/platform/云原生A.webp"></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_1]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/云原生B.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_2]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/云原生C.webp"></Image>
+            </div>
+          </Fragment>
+        );
+      case "多租户体系架构":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/多租户B.webp"></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_3]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/多租户A.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_4]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/多租户C.webp"></Image>
+            </div>
+          </Fragment>
+        );
+    }
   };
   return (
     <div className={styles.platform_container}>
@@ -71,33 +132,8 @@ const RenderContent: FC<RenderContent> = (props) => {
             [styles.platform_item_img]: true,
             ...animateMap,
           })}
-          // style={{
-          //   backgroundImage: `url(${props.img})`,
-          // }}
         >
-          <Image preview={false} src="/platform/云原生A.webp"></Image>
-          <div
-            className={classNames({
-              [styles.absoluteImg_1]: true,
-              [ScrollAnimateClass]: true,
-              ["animate__fadeInRight"]: true,
-              ["jump"]: true,
-            })}
-            data-wow-duration="2s"
-          >
-            <Image preview={false} src="/platform/云原生B.webp"></Image>
-          </div>
-          <div
-            className={classNames({
-              [styles.absoluteImg_2]: true,
-              [ScrollAnimateClass]: true,
-              ["animate__fadeInDown"]: true,
-              ["jump"]: true,
-            })}
-            data-wow-duration="2s"
-          >
-            <Image preview={false} src="/platform/云原生C.webp"></Image>
-          </div>
+          {renderImage({ title: props.title })}
         </div>
       </div>
     </div>
