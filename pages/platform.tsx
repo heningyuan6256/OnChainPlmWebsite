@@ -24,18 +24,18 @@ const RenderContent: FC<RenderContent> = (props) => {
   return (
     <div
       className={styles.platform_container}
-      style={
-        isOdd
-          ? {
-              background: "linear-gradient(180deg,#ffffff 16%, #edf3fd)",
-            }
-          : {
-              backgroundImage: `url(${props.backgroundImage})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "auto",
-              backgroundPosition: "center",
-            }
-      }
+      // style={
+      //   isOdd
+      //     ? {
+      //         background: "linear-gradient(180deg,#ffffff 16%, #edf3fd)",
+      //       }
+      //     : {
+      //         backgroundImage: `url(${props.backgroundImage})`,
+      //         backgroundRepeat: "no-repeat",
+      //         backgroundSize: "auto",
+      //         backgroundPosition: "center",
+      //       }
+      // }
     >
       <div
         className={classNames({
