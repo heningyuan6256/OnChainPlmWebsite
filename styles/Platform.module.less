@@ -1,3 +1,4 @@
+@import "@/styles/Constant.less";
 .main {
   .platform_container {
     .platform_item {
@@ -10,11 +11,27 @@
       gap: 99px;
       margin-bottom: 42px;
       &_title {
+        &_prefix {
+          height: 50px;
+          width: 50px;
+          background: @primaryColor;
+          border-radius: 3px;
+          font-size: 24px;
+          font-family: PingFang SC, PingFang SC-8;
+          font-weight: 700;
+          text-align: center;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         padding-top: 30px;
         font-size: 30px;
         font-family: PingFang SC, PingFang SC-8;
         font-weight: 700;
         text-align: left;
+        align-items: center;
+        gap: 20px;
         color: #1d293b;
         line-height: 30px;
         margin-bottom: 30px;

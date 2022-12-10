@@ -33,11 +33,15 @@ const RenderContent: FC<RenderContent> = (props) => {
       >
         <div style={{ minWidth: "430px" }}>
           <div
+            style={{ display: "flex" }}
             className={classNames({
               [styles.platform_item_title]: true,
               ...animateMap,
             })}
           >
+            <div className={styles.platform_item_title_prefix}>
+              0{props.contentKey + 1}
+            </div>{" "}
             {props.title}
           </div>
           <div
@@ -202,6 +206,7 @@ const platform: FC = () => {
         <main className={styles.main}>
           <div style={{ height: "80px" }}></div>
           <div
+            className={`${ScrollAnimateClass} animate__fadeIn`}
             style={{
               height: "536px",
               display: "flex",
