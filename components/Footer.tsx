@@ -3,7 +3,6 @@ import styles from "../styles/Footer.module.less";
 import { FC, Fragment } from "react";
 import { Button, Input } from "antd";
 import { AliIconFont } from "./icon";
-import { UserOutlined } from "@ant-design/icons";
 
 const Footer: FC = () => {
   return (

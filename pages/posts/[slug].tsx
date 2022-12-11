@@ -8,44 +8,44 @@ const PostPage = (props: any) => {
   // Render post title and content in the page from props
   return (
     <Layout>
-      <div style={{ height: "80px" }}></div>
+      {/* <div style={{ height: "80px" }}></div>
       <div style={{ margin: "0 auto", width: "1080px" }}>
         <h1>{props.post.title}</h1>
         <div
           className={Styles.cms}
           dangerouslySetInnerHTML={{ __html: props.post.html }}
         />
-      </div>
+      </div> */}
     </Layout>
   );
 };
 
-export async function getStaticPaths() {
-  const posts: any = await getPosts();
+// export async function getStaticPaths() {
+//   const posts: any = await getPosts();
 
-  // Get the paths we want to create based on posts
-  const paths = posts.map((post: any) => ({
-    params: { slug: post.slug },
-  }));
+//   // Get the paths we want to create based on posts
+//   const paths = posts.map((post: any) => ({
+//     params: { slug: post.slug },
+//   }));
 
-  // { fallback: false } means posts not found should 404.
-  return { paths, fallback: false };
-}
+//   // { fallback: false } means posts not found should 404.
+//   return { paths, fallback: false };
+// }
 
 // Pass the page slug over to the "getSinglePost" function
 // In turn passing it to the posts.read() to query the Ghost Content API
-export async function getStaticProps(context: any) {
-  const post = await getSinglePost(context.params.slug);
+// export async function getStaticProps(context: any) {
+//   const post = await getSinglePost(context.params.slug);
 
-  if (!post) {
-    return {
-      notFound: true,
-    };
-  }
+//   if (!post) {
+//     return {
+//       notFound: true,
+//     };
+//   }
 
-  return {
-    props: { post },
-  };
-}
+//   return {
+//     props: { post },
+//   };
+// }
 
 export default PostPage;
