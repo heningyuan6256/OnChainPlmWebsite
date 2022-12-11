@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.8.0",
+    "@ant-design/icons": "^4.0.0",
     "@tryghost/content-api": "^1.11.4",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
