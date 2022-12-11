@@ -28,7 +28,11 @@ const RenderContent: FC<RenderContent> = (props) => {
       case "云原生赋能平台":
         return (
           <Fragment>
-            <Image className={styles.relativeImg1} preview={false} src="/platform/云原生A.webp"></Image>
+            <Image
+              className={styles.relativeImg1}
+              preview={false}
+              src="/platform/云原生A.webp"
+            ></Image>
             <div
               className={classNames({
                 [styles.absoluteImg_1]: true,
@@ -79,6 +83,42 @@ const RenderContent: FC<RenderContent> = (props) => {
             >
               <Image preview={false} src="/platform/多租户C.webp"></Image>
             </div>
+          </Fragment>
+        );
+      case "安全和访问控制":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/安全访问A.webp"></Image>
+          </Fragment>
+        );
+      case "多维度企业协同":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/多维度协同A.webp"></Image>
+          </Fragment>
+        );
+      case "企业移动":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/企业移动A.webp"></Image>
+          </Fragment>
+        );
+      case "低代码开发":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/代码开发A.webp"></Image>
+          </Fragment>
+        );
+      case "系统开放能力":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/系统开放A.webp"></Image>
+          </Fragment>
+        );
+      case "应用分发与交付能力":
+        return (
+          <Fragment>
+            <Image preview={false} src="/platform/应用分发A.webp"></Image>
           </Fragment>
         );
     }

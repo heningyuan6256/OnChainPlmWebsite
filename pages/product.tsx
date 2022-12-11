@@ -7,7 +7,7 @@ const product: FC = ({ posts }: any) => {
   return (
     <Layout>
       <div style={{ height: "80px" }}></div>
-      <div>
+      {/* <div>
         <ul>
           {posts.map((post: any) => (
             <li key={post.id}>
@@ -15,20 +15,20 @@ const product: FC = ({ posts }: any) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </Layout>
   );
 };
-export async function getStaticProps(context: any) {
-  const posts = await getPosts();
-  if (!posts) {
-    return {
-      notFound: true,
-    };
-  }
+// export async function getStaticProps(context: any) {
+//   // const posts = await getPosts();
+//   // if (!posts) {
+//   //   return {
+//   //     notFound: true,
+//   //   };
+//   // }
 
-  return {
-    props: { posts },
-  };
-}
+//   // return {
+//   //   props: { posts },
+//   // };
+// }
 export default product;
