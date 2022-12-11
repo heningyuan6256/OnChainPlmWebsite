@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import { getPosts } from "./api/hello";
 import styles from "../styles/Product.module.less";
 import { Image } from "antd";
+import { CardShow } from "@components/CardShow";
 const product: FC = ({ posts }: any) => {
   return (
     <Layout>
@@ -23,6 +24,7 @@ const product: FC = ({ posts }: any) => {
         <div className={styles.title_wrapper_img}>
           <Image preview={false} src="/产品新插图.webp"></Image>
         </div>
+        <CardShow></CardShow>
       </div>
       {/* <div>
         <ul>
