@@ -314,8 +314,6 @@ const Slideshow: FC = () => {
   );
 };
 
-
-
 const PriceShow: FC = (props) => {
   type PriceShowProps = {
     key: string;
@@ -481,9 +479,13 @@ const WorldShow: FC = (props) => {
   return (
     <div className={styles.word_show}>
       <div className={styles.word_container}>
-        <div className={styles.word_container_box}>
-          <div className={styles.word_container_box_title1}>我们为您提供</div>
-          <div className={styles.word_container_box_title2}>
+        <div
+          className={`${styles.word_container_box} ${ScrollAnimateClass} animate__fadeIn`}
+        >
+          <div className={`${styles.word_container_box_title1}`}>
+            我们为您提供
+          </div>
+          <div className={`${styles.word_container_box_title2}`}>
             一站式产品生命周期
           </div>
           <div className={styles.word_container_box_title3}>解决方案</div>
