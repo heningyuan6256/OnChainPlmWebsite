@@ -289,16 +289,16 @@ const Slideshow: FC = () => {
       <div className={styles.slide_show_box}>
         <Carousel autoplay>
           <div>
-            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+            <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
           <div>
-            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+            <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
           <div>
-            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+            <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
           <div>
-            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+            <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
         </Carousel>
         {/* <Image preview={false} src="/首页电脑.webp"></Image> */}
