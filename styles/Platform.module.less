@@ -219,6 +219,26 @@
             }
           }
         }
+        .img8 {
+          .relativeImg {
+            padding-top: 100px;
+          }
+          .absoluteImg {
+            // 多维度
+            &_18 {
+              position: absolute;
+              bottom: 90px;
+              left: 200px;
+              z-index: -1;
+            }
+            &_19 {
+              position: absolute;
+              bottom: 160px;
+              left: 140px;
+              z-index: -2;
+            }
+          }
+        }
       }
     }
     @media (max-width: 1560px) {
@@ -367,6 +387,22 @@
                 position: absolute;
                 bottom: 220px;
                 left: 80px;
+              }
+            }
+          }
+          .img8 {
+            .absoluteImg {
+              &_18 {
+                position: absolute;
+                bottom: 50px;
+                left: 130px;
+                z-index: -1;
+              }
+              &_19 {
+                position: absolute;
+                bottom: 110px;
+                left: 110px;
+                z-index: -2;
               }
             }
           }

@@ -284,9 +284,35 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "应用分发与交付能力":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/应用分发A.webp"></Image>
-          </Fragment>
+          <div className={styles.img8}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/应用分发A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_18]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/应用分发B.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_19]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/应用分发C.webp"></Image>
+            </div>
+          </div>
         );
     }
   };
