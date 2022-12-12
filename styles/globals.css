@@ -160,3 +160,17 @@ a {
   -webkit-animation: jump 0.5s linear alternate infinite;
   animation: jump 0.5s linear alternate infinite;
 }
+
+.plm_loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.plm_loading > div {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: center;
+}

@@ -33,7 +33,7 @@ const Footer: FC = () => {
             className={classNames(
               styles.box1,
               ScrollAnimateClass,
-              "animate__fadeInUp"
+              "animate__fadeIn"
             )}
           >
             <Image
@@ -70,7 +70,7 @@ const Footer: FC = () => {
                 className={classNames(
                   styles.box2,
                   ScrollAnimateClass,
-                  "animate__fadeInUp"
+                  "animate__fadeIn"
                 )}
                 data-wow-delay={`0.2s`}
               >
@@ -85,7 +85,7 @@ const Footer: FC = () => {
                 className={classNames(
                   styles.box3,
                   ScrollAnimateClass,
-                  "animate__fadeInUp"
+                  "animate__fadeIn"
                 )}
                 data-wow-delay={`0.4s`}
               >
@@ -98,7 +98,7 @@ const Footer: FC = () => {
                 className={classNames(
                   styles.box4,
                   ScrollAnimateClass,
-                  "animate__fadeInUp"
+                  "animate__fadeIn"
                 )}
                 data-wow-delay={`0.6s`}
               >
