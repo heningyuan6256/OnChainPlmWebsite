@@ -319,13 +319,13 @@ const Slideshow: FC = () => {
             <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
         </Carousel>
-        <div className={styles.leftImage}>
+        <div className={classNames(styles.leftImage, "slowJump")}>
           <Image preview={false} src="/首页展示页装饰浅蓝.webp"></Image>
         </div>
         <div className={styles.leftDot}>
           <Image preview={false} src="/浅蓝色圆点装饰.webp"></Image>
         </div>
-        <div className={styles.rightImage}>
+        <div className={classNames(styles.rightImage, "slowJump")}>
           <Image preview={false} src="/首页展示页装饰蓝.webp"></Image>
         </div>
         <div className={styles.rightDot}>
