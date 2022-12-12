@@ -275,7 +275,7 @@ const product: FC = ({ posts }: any) => {
           </div>
         </div>
         <div className={styles.title_wrapper_img}>
-          <Image preview={false} src="/产品新插图.webp"></Image>
+          <Image preview={false} src="/产品新插图.png"></Image>
         </div>
         <CardShow></CardShow>
         {data.map((item, index) => (

@@ -292,7 +292,7 @@ const platform: FC = () => {
               justifyContent: "center",
             }}
           >
-            <Image preview={false} src="/产品新插图.webp"></Image>
+            <Image preview={false} src="/产品插图.png"></Image>
           </div>
           {data.map((item, index) => (
             <RenderContent
