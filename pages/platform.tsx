@@ -209,7 +209,7 @@ const RenderContent: FC<RenderContent> = (props) => {
                 [styles.absoluteImg_12]: true,
                 [ScrollAnimateClass]: true,
                 ["animate__fadeInRight"]: true,
-                ["jump"]: true,
+                ["sway"]: true,
               })}
               data-wow-duration="2s"
             >
@@ -220,7 +220,7 @@ const RenderContent: FC<RenderContent> = (props) => {
                 [styles.absoluteImg_13]: true,
                 [ScrollAnimateClass]: true,
                 ["animate__fadeInRight"]: true,
-                ["jump"]: true,
+                ["sway"]: true,
               })}
               data-wow-duration="2s"
             >
@@ -231,7 +231,7 @@ const RenderContent: FC<RenderContent> = (props) => {
                 [styles.absoluteImg_14]: true,
                 [ScrollAnimateClass]: true,
                 ["animate__fadeInRight"]: true,
-                ["jump"]: true,
+                ["sway"]: true,
               })}
               data-wow-duration="2s"
             >
@@ -242,7 +242,7 @@ const RenderContent: FC<RenderContent> = (props) => {
                 [styles.absoluteImg_15]: true,
                 [ScrollAnimateClass]: true,
                 ["animate__fadeInRight"]: true,
-                ["jump"]: true,
+                ["sway"]: true,
               })}
               data-wow-duration="2s"
             >

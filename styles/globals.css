@@ -108,6 +108,30 @@ a {
   }
 }
 
+@-webkit-keyframes sway {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(15px, 0px, 0);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(15px, 0px, 0);
+  }
+}
+
+.sway:not(.animate__animated) {
+  transform-origin: 0;
+  -webkit-animation: sway 0.5s linear alternate infinite;
+  animation: sway 0.5s linear alternate infinite;
+}
+
 .jump:not(.animate__animated) {
   transform-origin: 0;
   -webkit-animation: jump 0.5s linear alternate infinite;
