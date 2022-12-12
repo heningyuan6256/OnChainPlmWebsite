@@ -195,15 +195,60 @@ const RenderContent: FC<RenderContent> = (props) => {
               <Image preview={false} src="/platform/企业移动D.webp"></Image>
             </div>
           </div>
-          // <Fragment>
-          //   <Image preview={false} src="/platform/企业移动A.webp"></Image>
-          // </Fragment>
         );
       case "低代码开发":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/代码开发A.webp"></Image>
-          </Fragment>
+          <div className={styles.img6}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/代码开发A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_12]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/代码开发B.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_13]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/代码开发C.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_14]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/代码开发D.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_15]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/代码开发E.webp"></Image>
+            </div>
+          </div>
         );
       case "系统开放能力":
         return (
@@ -388,7 +433,7 @@ const platform: FC = () => {
               justifyContent: "center",
             }}
           >
-            <Image preview={false} src="/产品插图.png"></Image>
+            <Image preview={false} src="/产品新插图.svg"></Image>
           </div>
           {data.map((item, index) => (
             <RenderContent
