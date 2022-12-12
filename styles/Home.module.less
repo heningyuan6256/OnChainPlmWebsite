@@ -303,7 +303,6 @@
     margin-top: 141px;
     padding: 0px 0px 163px 0px;
     display: block;
-
     .title {
       font-size: 36px;
       font-family: PingFang SC, PingFang SC-8;
@@ -327,7 +326,7 @@
       color: #a7b3c5;
       line-height: 22px;
       margin: 0 auto;
-      margin-bottom: 52px;
+      margin-bottom: 146px;
     }
     //box
     &_box {
@@ -335,6 +334,40 @@
       margin: 0 auto;
       display: flex;
       justify-content: center;
+      background-image: url(/首页电脑.webp);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position-x: center;
+      height: 561px;
+      :global {
+        .plm-carousel {
+          padding: 0px 60px;
+          width: 100%;
+        }
+        .plm-carousel .slick-dots-bottom {
+          top: -94px;
+          height: 12px;
+        }
+        .plm-carousel .slick-dots li {
+          border-radius: 50%;
+          height: 12px;
+          width: 12px;
+          border: 1px solid #a7b3c5;
+        }
+
+        .plm-carousel .slick-dots li button {
+          opacity: 0;
+        }
+        .plm-carousel .slick-dots li button {
+          border-radius: 50%;
+          height: 12px;
+          width: 12px;
+        }
+        .plm-carousel .slick-dots li.slick-active {
+          background: @primaryColor;
+          border: 1px solid @primaryColor;
+        }
+      }
     }
     :global {
       .awssld__wrapper {

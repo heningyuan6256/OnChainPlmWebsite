@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import Image from "next/image";
 import styles from "../styles/Home.module.less";
-import { Button, Card, Col, Row, Image, Collapse } from "antd";
+import { Button, Card, Col, Row, Image, Collapse, Carousel } from "antd";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { getPosts } from "./api/hello";
@@ -287,7 +287,21 @@ const Slideshow: FC = () => {
         一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
       </div>
       <div className={styles.slide_show_box}>
-        <Image preview={false} src="/首页电脑.webp"></Image>
+        <Carousel autoplay>
+          <div>
+            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+          </div>
+          <div>
+            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+          </div>
+          <div>
+            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+          </div>
+          <div>
+            <Image preview={false} src="/首页电脑展示页.webp"></Image>
+          </div>
+        </Carousel>
+        {/* <Image preview={false} src="/首页电脑.webp"></Image> */}
         {/* <AwesomeSlider
           mobileTouch
           organicArrows={false}
