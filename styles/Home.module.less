@@ -339,13 +339,14 @@
       background-size: auto;
       background-position-x: center;
       height: 561px;
+      position: relative;
       :global {
         .plm-carousel {
           padding: 30px 60px;
           width: 960px;
         }
         .plm-carousel .slick-dots-bottom {
-          top: -94px;
+          top: -124px;
           height: 12px;
         }
         .plm-carousel .slick-dots li {
@@ -367,6 +368,30 @@
           background: @primaryColor;
           border: 1px solid @primaryColor;
         }
+      }
+      .leftImage {
+        position: absolute;
+        left: -100px;
+        z-index: -1;
+        top: 100px;
+      }
+      .leftDot {
+        position: absolute;
+        left: -100px;
+        z-index: -1;
+        top: 330px;
+      }
+      .rightImage {
+        position: absolute;
+        right: -50px;
+        z-index: -1;
+        top: 323px;
+      }
+      .rightDot {
+        position: absolute;
+        right: -50px;
+        z-index: -1;
+        top: -30px;
       }
     }
     :global {

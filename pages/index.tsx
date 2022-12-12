@@ -319,28 +319,18 @@ const Slideshow: FC = () => {
             <Image preview={false} src="/首页电脑展示图.svg"></Image>
           </div>
         </Carousel>
-        {/* <Image preview={false} src="/首页电脑.webp"></Image> */}
-        {/* <AwesomeSlider
-          mobileTouch
-          organicArrows={false}
-          media={[
-            {
-              source: "/slider1.png",
-            },
-            {
-              source: "/slider1.png",
-            },
-            {
-              source: "/slider1.png",
-            },
-            {
-              source: "/slider1.png",
-            },
-            {
-              source: "/slider1.png",
-            },
-          ]}
-        /> */}
+        <div className={styles.leftImage}>
+          <Image preview={false} src="/首页展示页装饰浅蓝.webp"></Image>
+        </div>
+        <div className={styles.leftDot}>
+          <Image preview={false} src="/浅蓝色圆点装饰.webp"></Image>
+        </div>
+        <div className={styles.rightImage}>
+          <Image preview={false} src="/首页展示页装饰蓝.webp"></Image>
+        </div>
+        <div className={styles.rightDot}>
+          <Image preview={false} src="/黄色圆点装饰.webp"></Image>
+        </div>
       </div>
     </div>
   );
