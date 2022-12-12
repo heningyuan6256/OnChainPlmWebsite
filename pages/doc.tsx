@@ -9,12 +9,6 @@ import styles from "../styles/doc.module.less";
 const doc: FC = () => {
   const { Panel } = Collapse;
 
-  const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-
   const generateTitle = (title: string, sort: string) => {
     return (
       <div className={"tree_title"}>
@@ -59,6 +53,69 @@ const doc: FC = () => {
     },
   ];
 
+  const cardData = [
+    {
+      title: "项目管理",
+      icon: "project",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "物料管理",
+      icon: "product",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "图文档管理",
+      icon: "file",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "产品结构管理",
+      icon: "process",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "工作流程管理",
+      icon: "workflow",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "工程变更管理",
+      icon: "control",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "产品可视化",
+      icon: "data",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "高级搜索",
+      icon: "search",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "CAD集成",
+      icon: "integrate",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+    {
+      title: "系统管理",
+      icon: "setting",
+      content:
+        "项目管理模块包括项目进度管理、项目资源管理、项目交付管理、项目费用管理、项目状态管理、项目基线管理、日历管理。",
+    },
+  ];
+
   return (
     <Fragment>
       <Head>
@@ -100,7 +157,46 @@ const doc: FC = () => {
               ))}
             </Collapse>
           </div>
-          <div className={styles.doc_container_right}></div>
+          <div className={styles.doc_container_right}>
+            <div className={styles.bread}>
+              文档 / <span>基本介绍</span>
+            </div>
+            <div className={styles.title}>基本介绍</div>
+            <div className={styles.line}></div>
+            <div className={styles.sub_title}>
+              在开始了解 OnChain PLM 之前，您可以通过基本介绍快速的了解 OnChain
+              PLM 包含哪些基础版块功能，并快速导航到您想了解的板块。
+            </div>
+            <div className={styles.card_list}>
+              {cardData.map((item, index) => (
+                <div key={index} className={styles.card}>
+                  <div className={styles.icon}>
+                    <AliIconFont
+                      style={{ fontSize: "32px" }}
+                      type={`icon-front-${item.icon}`}
+                    ></AliIconFont>
+                  </div>
+                  <div className={styles.title}>{item.title}</div>
+                  <div className={styles.content}>{item.content}</div>
+                  <div className={styles.more}>
+                    查看详情
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginLeft: "6px",
+                      }}
+                    >
+                      <AliIconFont
+                        type="icon-front-arrow"
+                        style={{ fontSize: "10px" }}
+                      ></AliIconFont>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </Layout>
     </Fragment>
