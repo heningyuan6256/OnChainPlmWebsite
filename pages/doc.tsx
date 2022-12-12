@@ -160,7 +160,7 @@ const doc: FC = () => {
                   key={index}
                   className={classNames(
                     ScrollAnimateClass,
-                    "animate__fadeInLeft"
+                    "animate__fadeIn"
                   )}
                 >
                   <div className={"tree_item_box"}>

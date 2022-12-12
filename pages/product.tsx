@@ -155,8 +155,7 @@ const product: FC = ({ posts }: any) => {
 
     {
       img: "/平台-应用分发与交付插图.webp",
-      content:
-        "OnChain PLM以用户、角色和权限的形式提供强大的访问控制。",
+      content: "OnChain PLM以用户、角色和权限的形式提供强大的访问控制。",
       title: "用户、角色和权限控制",
       backgroundImage: "/平台-波浪D.webp",
       list: [
@@ -274,7 +273,9 @@ const product: FC = ({ posts }: any) => {
             深入了解您的产品数据，使您的产品团队能够做出正确的决策并更快地将您的产品推向市场。
           </div>
         </div>
-        <div className={styles.title_wrapper_img}>
+        <div
+          className={`${styles.title_wrapper_img} ${ScrollAnimateClass} animate__fadeIn`}
+        >
           <Image preview={false} src="/产品新插图.png"></Image>
         </div>
         <CardShow></CardShow>
