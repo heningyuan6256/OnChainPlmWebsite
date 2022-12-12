@@ -72,60 +72,74 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        .relativeImg1 {
-          padding-top: 100px;
+        .img1 {
+          .relativeImg1 {
+            padding-top: 100px;
+          }
+          .absoluteImg {
+            // 云原生平台
+            &_1 {
+              position: absolute;
+              z-index: -1;
+              bottom: 60px;
+              left: 300px;
+            }
+            &_2 {
+              position: absolute;
+              z-index: -1;
+              bottom: 250px;
+              left: 200px;
+            }
+          }
         }
-        .absoluteImg {
-          // 云原生平台
-          &_1 {
-            position: absolute;
-            z-index: -1;
-            bottom: 60px;
-            left: 300px;
-          }
-          &_2 {
-            position: absolute;
-            z-index: -1;
-            bottom: 250px;
-            left: 200px;
-          }
-          // 多租户
-          &_3 {
-            position: absolute;
-            z-index: -1;
-            bottom: 100px;
-            left: 60px;
-          }
-          &_4 {
-            position: absolute;
-            z-index: -1;
-            bottom: 160px;
-            left: 335px;
-          }
+        // 多租户
+        &_3 {
+          position: absolute;
+          z-index: -1;
+          bottom: 100px;
+          left: 60px;
+        }
+        &_4 {
+          position: absolute;
+          z-index: -1;
+          bottom: 160px;
+          left: 335px;
         }
       }
     }
     @media (max-width: 1560px) {
+      :global {
+        .plm-image {
+          transform: scale(0.8);
+        }
+      }
+
       .platform_item {
         width: 960px;
         height: 363px;
         &_img {
           height: 363px;
           min-width: 460px;
+
+          .img1 {
+            .absoluteImg {
+              // 云原生平台
+              &_1 {
+                position: absolute;
+                z-index: -1;
+                bottom: 30px;
+                left: 220px;
+              }
+              &_2 {
+                position: absolute;
+                z-index: -1;
+                bottom: 180px;
+                left: 150px;
+              }
+            }
+          }
+
           .absoluteImg {
-            // 云原生平台
-            &_1 {
-              position: absolute;
-              z-index: -1;
-              bottom: 10px;
-              left: 300px;
-            }
-            &_2 {
-              position: absolute;
-              z-index: -1;
-              bottom: 180px;
-              left: 200px;
-            }
             // 多租户
             &_3 {
               position: absolute;

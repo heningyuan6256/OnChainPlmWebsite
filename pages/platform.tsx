@@ -27,7 +27,7 @@ const RenderContent: FC<RenderContent> = (props) => {
     switch (title) {
       case "云原生赋能平台":
         return (
-          <Fragment>
+          <div className={styles.img1}>
             <Image
               className={styles.relativeImg1}
               preview={false}
@@ -55,7 +55,7 @@ const RenderContent: FC<RenderContent> = (props) => {
             >
               <Image preview={false} src="/platform/云原生C.webp"></Image>
             </div>
-          </Fragment>
+          </div>
         );
       case "多租户体系架构":
         return (
