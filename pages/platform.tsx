@@ -134,10 +134,6 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "多维度企业协同":
         return (
-          // <Fragment>
-          //   <Image preview={false} src="/platform/多维度协同A.webp"></Image>
-          // </Fragment>
-
           <div className={styles.img4}>
             <Image
               className={styles.relativeImg}
@@ -159,9 +155,49 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "企业移动":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/企业移动A.webp"></Image>
-          </Fragment>
+          <div className={styles.img5}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/企业移动A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_9]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/企业移动B.svg"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_10]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/企业移动C.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_11]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/企业移动D.webp"></Image>
+            </div>
+          </div>
+          // <Fragment>
+          //   <Image preview={false} src="/platform/企业移动A.webp"></Image>
+          // </Fragment>
         );
       case "低代码开发":
         return (
