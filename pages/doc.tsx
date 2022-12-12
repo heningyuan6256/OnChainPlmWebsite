@@ -131,7 +131,30 @@ const doc: FC = () => {
         <div className={styles.doc_container}>
           <div className={styles.doc_container_left}>
             <div className={styles.title}>目录</div>
-            <Collapse defaultActiveKey={["1"]} ghost>
+            <Collapse
+              defaultActiveKey={["1"]}
+              ghost
+              expandIcon={({ isActive }) =>
+                isActive ? (
+                  <AliIconFont
+                    style={{
+                      color: "#A7B3C5",
+                      fontSize: "10px",
+                      transform: "rotate(90deg)",
+                    }}
+                    type="icon-front-arrow"
+                  ></AliIconFont>
+                ) : (
+                  <AliIconFont
+                    style={{
+                      color: "#A7B3C5",
+                      fontSize: "10px",
+                    }}
+                    type="icon-front-arrow"
+                  ></AliIconFont>
+                )
+              }
+            >
               {docCatalog.map((item: any, index) => (
                 <Panel header={item.title} key={index}>
                   <div className={"tree_item_box"}>
