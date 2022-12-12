@@ -1,11 +1,27 @@
-import { Image } from "antd";
+import { AliIconFont } from "@components/icon";
+import { Button, Checkbox, Collapse, Image } from "antd";
 import classNames from "classnames";
 import Head from "next/head";
 import { FC, Fragment } from "react";
 import Layout from "../components/Layout";
 import { ScrollAnimateClass } from "../constant";
-
+import styles from "../styles/log.module.less";
 const log: FC = () => {
+  const checkedList = [
+    { label: "项目管理", checked: true },
+    { label: "数据管理", checked: false },
+    { label: "工作流", checked: true },
+    { label: "型谱", checked: false },
+    { label: "搜索", checked: false },
+  ];
+
+  const functionList = [
+    { label: "基础设置", checked: true },
+    { label: "分类设置", checked: false },
+    { label: "条件设置", checked: true },
+    { label: "流程设置", checked: false },
+    { label: "用户设置", checked: false },
+  ];
   return (
     <Fragment>
       <Head>
@@ -15,6 +31,43 @@ const log: FC = () => {
       </Head>
       <Layout>
         <div style={{ height: "80px" }}></div>
+        <div className={styles.topImg}>
+          <div>产品更新日志</div>
+        </div>
+        <div className={styles.doc_container}>
+          <div className={styles.doc_container_left}>
+            <div className={styles.wrapper}>
+              <div className={styles.button}>
+                <Button>
+                  现已推出
+                </Button>
+              </div>
+
+              <div className={styles.title}>功能标签</div>
+              {checkedList.map((item, index) => (
+                <div
+                  key={index}
+                  style={{ paddingLeft: "44px", marginBottom: "16px" }}
+                >
+                  <Checkbox checked={true}>{item.label}</Checkbox>
+                </div>
+              ))}
+
+              <div className={styles.title} style={{ marginTop: "12px" }}>
+                后台功能
+              </div>
+              {functionList.map((item, index) => (
+                <div
+                  key={index}
+                  style={{ paddingLeft: "44px", marginBottom: "16px" }}
+                >
+                  <Checkbox checked={true}>{item.label}</Checkbox>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles.doc_container_right}></div>
+        </div>
       </Layout>
     </Fragment>
   );
