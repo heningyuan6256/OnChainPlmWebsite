@@ -59,8 +59,12 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "多租户体系架构":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/多租户B.webp"></Image>
+          <div className={styles.img2}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/多租户B.webp"
+            ></Image>
             <div
               className={classNames({
                 [styles.absoluteImg_3]: true,
@@ -83,7 +87,7 @@ const RenderContent: FC<RenderContent> = (props) => {
             >
               <Image preview={false} src="/platform/多租户C.webp"></Image>
             </div>
-          </Fragment>
+          </div>
         );
       case "安全和访问控制":
         return (
