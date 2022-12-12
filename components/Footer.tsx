@@ -29,7 +29,13 @@ const Footer: FC = () => {
       </div>
       <footer className={styles.footer}>
         <div className={styles.box}>
-          <div className={styles.box1}>
+          <div
+            className={classNames(
+              styles.box1,
+              ScrollAnimateClass,
+              "animate__fadeInUp"
+            )}
+          >
             <Image
               style={{ marginBottom: "40px" }}
               src={"/front-onchain.svg"}
@@ -60,7 +66,14 @@ const Footer: FC = () => {
           </div>
           <div className={styles.box_container}>
             <div style={{ display: "flex" }}>
-              <div className={styles.box2}>
+              <div
+                className={classNames(
+                  styles.box2,
+                  ScrollAnimateClass,
+                  "animate__fadeInUp"
+                )}
+                data-wow-delay={`0.2s`}
+              >
                 <div className={styles.title}>产品</div>
                 <div className={styles.row}>事件</div>
                 <div className={styles.row}>更新日志</div>
@@ -68,13 +81,27 @@ const Footer: FC = () => {
                 <div className={styles.row}>隐私政策</div>
                 <div className={styles.row}>与华为云的合作</div>
               </div>
-              <div className={styles.box3}>
+              <div
+                className={classNames(
+                  styles.box3,
+                  ScrollAnimateClass,
+                  "animate__fadeInUp"
+                )}
+                data-wow-delay={`0.4s`}
+              >
                 <div className={styles.title}>服务</div>
                 <div className={styles.row}>解决方案</div>
                 <div className={styles.row}>技术博客</div>
                 <div className={styles.row}>帮助中心</div>
               </div>
-              <div className={styles.box4}>
+              <div
+                className={classNames(
+                  styles.box4,
+                  ScrollAnimateClass,
+                  "animate__fadeInUp"
+                )}
+                data-wow-delay={`0.6s`}
+              >
                 <div className={styles.title}>业务支持</div>
                 <div className={styles.row}>027-88319536</div>
                 <div className={styles.row}>postmaster@dahaikj.com</div>
