@@ -281,15 +281,27 @@ const Slideshow: FC = () => {
   return (
     <div
       className={classNames(
-        styles.slide_show,
-        ScrollAnimateClass,
-        "animate__fadeInUp"
+        styles.slide_show
+        // ScrollAnimateClass,
+        // "animate__fadeInUp"
       )}
     >
-      <div className={styles.title}>
+      <div
+        className={classNames(
+          styles.title,
+          ScrollAnimateClass,
+          "animate__fadeInUp"
+        )}
+      >
         一些<span>很屌</span>的描述
       </div>
-      <div className={styles.sub_title}>
+      <div
+        className={classNames(
+          styles.sub_title,
+          ScrollAnimateClass,
+          "animate__fadeInUp"
+        )}
+      >
         一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
       </div>
       <div className={styles.slide_show_box}>
@@ -478,10 +490,22 @@ const PriceShow: FC = (props) => {
   };
   return (
     <div className={styles.price_show}>
-      <div className={styles.title}>
+      <div
+        className={classNames(
+          styles.title,
+          ScrollAnimateClass,
+          "animate__fadeInUp"
+        )}
+      >
         <span>自由选择</span>适合您的方案
       </div>
-      <div className={styles.sub_title}>
+      <div
+        className={classNames(
+          styles.sub_title,
+          ScrollAnimateClass,
+          "animate__fadeInUp"
+        )}
+      >
         一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描述一些描
       </div>
       <div className={styles.card_list}>
