@@ -112,6 +112,29 @@
             }
           }
         }
+        .img3 {
+          .relativeImg {
+            padding-top: 100px;
+          }
+          .absoluteImg {
+            // 安全访问
+            &_5 {
+              position: absolute;
+              bottom: 280px;
+              left: 400px;
+            }
+            &_6 {
+              position: absolute;
+              bottom: 160px;
+              left: 425px;
+            }
+            &_7 {
+              position: absolute;
+              bottom: 150px;
+              left: 25px;
+            }
+          }
+        }
       }
     }
     @media (max-width: 1560px) {
@@ -160,6 +183,27 @@
                 z-index: -1;
                 bottom: 130px;
                 left: 235px;
+              }
+            }
+          }
+
+          .img3 {
+            .absoluteImg {
+              // 安全访问
+              &_5 {
+                position: absolute;
+                bottom: 220px;
+                left: 310px;
+              }
+              &_6 {
+                position: absolute;
+                bottom: 120px;
+                left: 330px;
+              }
+              &_7 {
+                position: absolute;
+                bottom: 107px;
+                left: 0px;
               }
             }
           }

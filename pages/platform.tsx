@@ -91,9 +91,46 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "安全和访问控制":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/安全访问A.webp"></Image>
-          </Fragment>
+          <div className={styles.img3}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/安全访问A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_5]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/安全访问C.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_6]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/安全访问D.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_7]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInDown"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/安全访问B.webp"></Image>
+            </div>
+          </div>
         );
       case "多维度企业协同":
         return (

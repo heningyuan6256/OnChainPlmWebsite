@@ -276,7 +276,7 @@ const product: FC = ({ posts }: any) => {
         <div
           className={`${styles.title_wrapper_img} ${ScrollAnimateClass} animate__fadeIn`}
         >
-          <Image preview={false} src="/产品新插图.png"></Image>
+          <Image preview={false} src="/产品新插图.svg"></Image>
         </div>
         <CardShow></CardShow>
         {data.map((item, index) => (
