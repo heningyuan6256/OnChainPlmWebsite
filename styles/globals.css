@@ -44,6 +44,16 @@ a {
   color: #a7b3c5;
   line-height: 22px;
 }
+.tree_item_box > .child_item {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tree_item_box > .child_item:hover {
+  font-family: PingFang SC, PingFang SC-6;
+  font-weight: 500;
+  color: #3c82f5;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

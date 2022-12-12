@@ -132,7 +132,6 @@ const doc: FC = () => {
           <div className={styles.doc_container_left}>
             <div className={styles.title}>目录</div>
             <Collapse
-              defaultActiveKey={["1"]}
               ghost
               expandIcon={({ isActive }) =>
                 isActive ? (
@@ -156,13 +155,21 @@ const doc: FC = () => {
               }
             >
               {docCatalog.map((item: any, index) => (
-                <Panel header={item.title} key={index}>
+                <Panel
+                  header={item.title}
+                  key={index}
+                  className={classNames(
+                    ScrollAnimateClass,
+                    "animate__fadeInLeft"
+                  )}
+                >
                   <div className={"tree_item_box"}>
                     {(item.list || []).map(
                       (childItem: any, childIndex: number) => {
                         return (
                           <div
                             key={childIndex}
+                            className={"child_item"}
                             style={{
                               marginBottom:
                                 (item.list || []).length == childIndex + 1
@@ -192,7 +199,15 @@ const doc: FC = () => {
             </div>
             <div className={styles.card_list}>
               {cardData.map((item, index) => (
-                <div key={index} className={styles.card}>
+                <div
+                  key={index}
+                  data-wow-delay={`${0 + Number(index) * 0.1}s`}
+                  className={classNames(
+                    styles.card,
+                    ScrollAnimateClass,
+                    "animate__fadeInUp"
+                  )}
+                >
                   <div className={styles.icon}>
                     <AliIconFont
                       style={{ fontSize: "32px" }}

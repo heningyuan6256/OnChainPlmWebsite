@@ -105,7 +105,7 @@
           line-height: 22px;
           margin-bottom: 18px;
         }
-        .more{
+        .more {
           color: @primaryColor;
           display: flex;
           align-items: center;
@@ -121,7 +121,13 @@
     //   padding-bottom: 20px;
     // }
     .plm-collapse > .plm-collapse-item > .plm-collapse-header {
+      display: flex;
+      align-items: center;
       padding: 0px;
+      height: 28px;
+      &:hover{
+        background-color: #EDF6FF;
+      }
       .plm-collapse-expand-icon {
         position: absolute;
         right: 0px;
@@ -158,6 +164,13 @@
     //   > .plm-collapse-content-box {
     //   padding: 0px;
     // }
+
+    
+    .plm-collapse-item-active {
+      .plm-collapse-header {
+        background-color: #edf6ff;
+      }
+    }
   }
 }
 
@@ -172,3 +185,4 @@
     width: 960px;
   }
 }
+
