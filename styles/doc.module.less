@@ -6,18 +6,82 @@
   background-size: auto;
   background-position-x: center;
   padding-top: 80px;
+  div {
+    font-size: 36px;
+    font-family: PingFang SC, PingFang SC-8;
+    font-weight: 700;
+    text-align: center;
+    color: #1d293b;
+    line-height: 58px;
+  }
+}
+.doc_container {
+  width: 1168px;
+  margin: 0 auto;
+  display: flex;
+  padding: 60px 0px;
+  &_left {
+    width: 222px;
+    border-right: 1px solid #d9e4f4;
+    .title {
+      font-size: 14px;
+      font-family: PingFang SC, PingFang SC-6;
+      font-weight: 500;
+      color: #475569;
+      line-height: 20px;
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+  }
+  :global {
+    // .plm-collapse
+    //   > .plm-collapse-item:not(.plm-collapse-item-active)
+    //   > .plm-collapse-header {
+    //   padding-bottom: 20px;
+    // }
+    .plm-collapse > .plm-collapse-item > .plm-collapse-header {
+      padding: 0px;
+      .plm-collapse-expand-icon {
+        position: absolute;
+        right: 0px;
+      }
+    }
+    .plm-collapse-ghost > .plm-collapse-item {
+      padding-bottom: 16px;
+    }
+    .plm-collapse-ghost
+      > .plm-collapse-item
+      > .plm-collapse-content
+      > .plm-collapse-content-box {
+      padding: 10px 33px 0px 19px;
+    }
+    .plm-collapse
+      > .plm-collapse-item
+      > .plm-collapse-header
+      .plm-collapse-header-text {
+      font-size: 14px;
+      font-family: PingFang SC, PingFang SC-6;
+      font-weight: 500;
+      text-align: left;
+      color: #475569;
+      line-height: 20px;
+      padding: 0px 10px;
+    }
+    .plm-collapse-item-active{
+      // padding-bottom: 20px;
+      // margin-bottom: 0px !important;
+    }
+    // .plm-collapse-ghost
+    //   > .plm-collapse-item
+    //   > .plm-collapse-content
+    //   > .plm-collapse-content-box {
+    //   padding: 0px;
+    // }
+  }
 }
 
 @media (max-width: 1440px) {
   .topImg {
     background-image: url(/1440/文档-基本介绍.webp);
-    div {
-      font-size: 36px;
-      font-family: PingFang SC, PingFang SC-8;
-      font-weight: 700;
-      text-align: center;
-      color: #1d293b;
-      line-height: 58px;
-    }
   }
 }

@@ -30,6 +30,21 @@ a {
   box-sizing: border-box;
 }
 
+.tree_title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.tree_item_box {
+  border-left: 1px solid #d9e4f4;
+  padding-left: 19px;
+  font-size: 14px;
+  font-family: PingFang SC, PingFang SC-5;
+  font-weight: 400;
+  color: #a7b3c5;
+  line-height: 22px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

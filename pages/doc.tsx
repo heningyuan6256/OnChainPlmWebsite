@@ -1,4 +1,5 @@
-import { Image } from "antd";
+import { AliIconFont } from "@components/icon";
+import { Collapse, Image } from "antd";
 import classNames from "classnames";
 import Head from "next/head";
 import { FC, Fragment } from "react";
@@ -6,6 +7,58 @@ import Layout from "../components/Layout";
 import { ScrollAnimateClass } from "../constant";
 import styles from "../styles/doc.module.less";
 const doc: FC = () => {
+  const { Panel } = Collapse;
+
+  const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+
+  const generateTitle = (title: string, sort: string) => {
+    return (
+      <div className={"tree_title"}>
+        <AliIconFont
+          style={{ fontSize: "18px", color: "#475569" }}
+          type={`icon-front-${sort}`}
+        ></AliIconFont>
+        {title}
+      </div>
+    );
+  };
+  const docCatalog = [
+    {
+      title: generateTitle("基本介绍", "sort"),
+    },
+    {
+      title: generateTitle("项目管理", "project"),
+    },
+    { title: generateTitle("物料管理", "product") },
+    { title: generateTitle("图文档管理", "file") },
+    {
+      title: generateTitle("产品结构管理", "process"),
+      list: [
+        { title: "BOM结构管理" },
+        { title: "BOM结构中物料的…" },
+        { title: "替代料管理" },
+        { title: "BOM结构差异分析" },
+      ],
+    },
+    { title: generateTitle("工作流程管理", "workflow") },
+    { title: generateTitle("工程变更管理", "control") },
+
+    { title: generateTitle("产品可视化", "data") },
+    {
+      title: generateTitle("高级搜索", "search"),
+    },
+    {
+      title: generateTitle("CAD集成", "integrate"),
+    },
+    {
+      title: generateTitle("系统管理", "setting"),
+    },
+  ];
+
   return (
     <Fragment>
       <Head>
@@ -17,6 +70,37 @@ const doc: FC = () => {
         <div style={{ height: "80px" }}></div>
         <div className={styles.topImg}>
           <div>产品文档</div>
+        </div>
+        <div className={styles.doc_container}>
+          <div className={styles.doc_container_left}>
+            <div className={styles.title}>目录</div>
+            <Collapse defaultActiveKey={["1"]} ghost>
+              {docCatalog.map((item: any, index) => (
+                <Panel header={item.title} key={index}>
+                  <div className={"tree_item_box"}>
+                    {(item.list || []).map(
+                      (childItem: any, childIndex: number) => {
+                        return (
+                          <div
+                            key={childIndex}
+                            style={{
+                              marginBottom:
+                                (item.list || []).length == childIndex + 1
+                                  ? "0px"
+                                  : "12px",
+                            }}
+                          >
+                            {childItem.title}
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+                </Panel>
+              ))}
+            </Collapse>
+          </div>
+          <div className={styles.doc_container_right}></div>
         </div>
       </Layout>
     </Fragment>
