@@ -31,14 +31,14 @@ const Header: FC = () => {
       label: "产品",
       key: "/product",
     },
-    {
-      label: "解决方案",
-      key: "/solution",
-    },
-    {
-      label: "价格",
-      key: "/price",
-    },
+    // {
+    //   label: "解决方案",
+    //   key: "/solution",
+    // },
+    // {
+    //   label: "价格",
+    //   key: "/price",
+    // },
     {
       label: "文档",
       key: "/doc",

@@ -81,7 +81,7 @@ export const CardShow: FC = () => {
           return (
             <div
               key={index}
-              data-wow-delay={`${0 + Number(index) * 0.2}s`}
+              data-wow-delay={`${0 + Number(index) * 0.1}s`}
               className={classNames(
                 styles.card_content,
                 ScrollAnimateClass,

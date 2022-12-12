@@ -550,7 +550,13 @@ const ProblemShow: FC = () => {
   return (
     <div className={styles.problem_show}>
       <div className={styles.box}>
-        <div className={styles.list}>
+        <div
+          className={classNames(
+            styles.list,
+            ScrollAnimateClass,
+            "animate__fadeInLeft"
+          )}
+        >
           <div className={styles.title}>常见问题</div>
 
           <Collapse
@@ -580,7 +586,14 @@ const ProblemShow: FC = () => {
             })}
           </Collapse>
         </div>
-        <div className={classNames(styles.figure, "slowJump")}>
+        <div
+          className={classNames(
+            styles.figure,
+            ScrollAnimateClass,
+            "animate__fadeInRight",
+            "slowJump"
+          )}
+        >
           <Image preview={false} src="/首页常见问题插图.webp"></Image>
         </div>
       </div>
