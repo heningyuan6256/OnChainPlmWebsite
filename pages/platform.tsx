@@ -134,9 +134,28 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "多维度企业协同":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/多维度协同A.webp"></Image>
-          </Fragment>
+          // <Fragment>
+          //   <Image preview={false} src="/platform/多维度协同A.webp"></Image>
+          // </Fragment>
+
+          <div className={styles.img4}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/多维度协同A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_8]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["jump"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/多维度协同C.webp"></Image>
+            </div>
+          </div>
         );
       case "企业移动":
         return (
