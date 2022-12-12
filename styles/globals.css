@@ -126,6 +126,29 @@ a {
   }
 }
 
+@-webkit-keyframes slowJump {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0px, 15px, 0);
+  }
+}
+
+@keyframes slowJump {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0px, 15px, 0);
+  }
+}
+.slowJump:not(.animate__animated) {
+  transform-origin: 0;
+  -webkit-animation: slowJump 1s linear alternate infinite;
+  animation: slowJump 1s linear alternate infinite;
+}
+
 .sway:not(.animate__animated) {
   transform-origin: 0;
   -webkit-animation: sway 0.5s linear alternate infinite;

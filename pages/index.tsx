@@ -247,7 +247,13 @@ const AdvertiseBox: FC = (props) => {
           </div>
         </div>
       </div>
-      <div className={styles.advertise_box}>
+      <div
+        className={classNames(
+          styles.advertise_box,
+          ScrollAnimateClass,
+          "animate__fadeIn"
+        )}
+      >
         <div className={styles.advertise_box_title}>
           <span className={styles.advertise_box_title_1}>新一代</span>
           <br />
@@ -275,9 +281,9 @@ const Slideshow: FC = () => {
   return (
     <div
       className={classNames(
-        styles.slide_show
-        // ScrollAnimateClass,
-        // "fadeInUp"
+        styles.slide_show,
+        ScrollAnimateClass,
+        "animate__fadeInUp"
       )}
     >
       <div className={styles.title}>
@@ -574,7 +580,7 @@ const ProblemShow: FC = () => {
             })}
           </Collapse>
         </div>
-        <div className={styles.figure}>
+        <div className={classNames(styles.figure, "slowJump")}>
           <Image preview={false} src="/首页常见问题插图.webp"></Image>
         </div>
       </div>

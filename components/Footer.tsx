@@ -3,12 +3,20 @@ import styles from "../styles/Footer.module.less";
 import { FC, Fragment } from "react";
 import { Button, Input } from "antd";
 import { AliIconFont } from "./icon";
+import classNames from "classnames";
+import { ScrollAnimateClass } from "@constant";
 
 const Footer: FC = () => {
   return (
     <Fragment>
       <div className={styles.apply_show}>
-        <div className={styles.box}>
+        <div
+          className={classNames(
+            styles.box,
+            ScrollAnimateClass,
+            "animate__fadeIn"
+          )}
+        >
           <div className={styles.apply_show_title}>提供一站式</div>
           <div className={styles.apply_show_title}>产品全生命周期解决方案</div>
           <div className={styles.apply_show_sub_title}>

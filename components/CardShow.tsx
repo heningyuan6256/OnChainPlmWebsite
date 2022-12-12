@@ -61,7 +61,13 @@ export const CardShow: FC = () => {
     },
   ];
   return (
-    <div className={styles.card_show}>
+    <div
+      className={classNames(
+        styles.card_show,
+        ScrollAnimateClass,
+        "animate__fadeInUp"
+      )}
+    >
       <div className={styles.card_show_title}>
         <div className={styles.title}>
           一些<span>很屌</span>的描述
