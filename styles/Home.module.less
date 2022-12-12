@@ -477,6 +477,7 @@
           align-items: center;
           padding: 32px 0px;
           flex-direction: column;
+          transition: background 0.3s;
           .figure {
             margin-bottom: 32px;
           }
@@ -525,6 +526,27 @@
             justify-content: left;
             align-items: center;
             gap: 10px;
+          }
+        }
+        .card:hover {
+          background: @primaryColor;
+          cursor: pointer;
+          .title {
+            color: #ffffff;
+          }
+          .price {
+            color: #fff;
+          }
+          .button {
+            :global {
+              .plm-btn.plm-btn-primary {
+                background: #fff;
+                color: @primaryColor;
+              }
+            }
+          }
+          .list_item{
+            color: #fff;
           }
         }
       }
