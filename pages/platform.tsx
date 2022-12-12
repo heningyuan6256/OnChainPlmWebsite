@@ -252,9 +252,35 @@ const RenderContent: FC<RenderContent> = (props) => {
         );
       case "系统开放能力":
         return (
-          <Fragment>
-            <Image preview={false} src="/platform/系统开放A.webp"></Image>
-          </Fragment>
+          <div className={styles.img7}>
+            <Image
+              className={styles.relativeImg}
+              preview={false}
+              src="/platform/系统开放A.webp"
+            ></Image>
+            <div
+              className={classNames({
+                [styles.absoluteImg_16]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["sway"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/系统开放B.webp"></Image>
+            </div>
+            <div
+              className={classNames({
+                [styles.absoluteImg_17]: true,
+                [ScrollAnimateClass]: true,
+                ["animate__fadeInRight"]: true,
+                ["sway"]: true,
+              })}
+              data-wow-duration="2s"
+            >
+              <Image preview={false} src="/platform/系统开放B.webp"></Image>
+            </div>
+          </div>
         );
       case "应用分发与交付能力":
         return (
