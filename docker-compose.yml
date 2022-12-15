@@ -1,0 +1,53 @@
+version: "3.3"
+services:
+  caddy:
+    image: caddy:2
+    restart: always
+    ports:
+      - "6180:80"
+      - "6443:443"
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - caddy-data:/data
+    networks:
+      - docker-network
+  ghost:
+    image: ghost:5.22
+    restart: always
+    ports:
+      - "2368:2368"
+    depends_on:
+      - db
+    environment:
+      url: http://192.168.0.104:2368
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: ghost
+      database__connection__password: ghostdbpass
+      database__connection__database: ghostdb
+    volumes:
+      - content:/var/lib/ghost/content
+      - ./config.production.json:/var/lib/ghost/config.production.json:z
+    networks:
+      - docker-network
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ghostdbpass
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ghostdbpass
+      MYSQL_DATABASE: ghostdb
+    volumes:
+      - mysql:/var/lib/mysql
+    networks:
+      - docker-network
+
+volumes:
+  mysql:
+  content:
+  caddy-data:
+networks:
+  docker-network:
+    driver: bridge

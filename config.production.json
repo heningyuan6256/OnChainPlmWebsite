@@ -1,0 +1,31 @@
+{
+    "url": "http://localhost:2368",
+    "server": {
+      "port": 2368,
+      "host": "::"
+    },
+    "mail": {
+        "from": "xulong@dahaikj.com",
+        "transport": "SMTP",
+        "options": {
+            "service": "Email",
+            "host": "smtp.mxhichina.com",
+            "port": 465,
+            "secure": true,
+            "auth": {
+                "user": "noreply@dahaikj.com",
+                "pass": "Boat1234qwer!"
+            }
+        }
+    },
+    "logging": {
+      "transports": [
+        "file",
+        "stdout"
+      ]
+    },
+    "process": "systemd",
+    "paths": {
+      "contentPath": "/var/lib/ghost/content"
+    }
+  }
