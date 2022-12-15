@@ -38,24 +38,35 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-1.svg",
               "front-2.svg",
-              "front-3.svg",
               "front-4.svg",
               "front-5.svg",
-              "front-6.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-27.svg",
+              "front-30.svg",
+              "front-15.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.3;
+              } else if (index == 1) {
+                opacity = 0.5;
+              } else if (index == 2) {
+                opacity = 0.8;
+              }
+              return (
+                <Image
+                  key={index}
+                  src={`/techLogo/${item}`}
+                  style={{ opacity: opacity }}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
           <div
             className={classNames({
@@ -65,24 +76,34 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-7.svg",
-              "front-8.svg",
-              "front-9.svg",
-              "front-10.svg",
-              "front-11.svg",
-              "front-12.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-33.svg",
+              "front-37.svg",
+              "front-13.svg",
+              "front-14.svg",
+              "front-17.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.3;
+              } else if (index == 1) {
+                opacity = 0.5;
+              } else if (index == 2) {
+                opacity = 0.5;
+              }
+              return (
+                <Image
+                  key={index}
+                  style={{ opacity: opacity }}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
         </div>
         {/* 第二行 */}
@@ -94,24 +115,29 @@ const AdvertiseBox: FC = (props) => {
               ...leftAnimateConfig,
             })}
           >
-            {[
-              "front-13.svg",
-              "front-14.svg",
-              "front-15.svg",
-              "front-16.svg",
-              "front-17.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+            {["front-8.svg", "front-3.svg", "front-36.svg", "front-29.svg"].map(
+              (item, index) => {
+                let opacity = 1;
+                if (index == 0) {
+                  opacity = 0.3;
+                } else if (index === 1) {
+                  opacity = 0.8;
+                }
+                return (
+                  <Image
+                    key={index}
+                    style={{ opacity: opacity }}
+                    src={`/techLogo/${item}`}
+                    alt=""
+                    preview={{
+                      visible: false,
+                    }}
+                    // width={72}
+                    //height={72}
+                  ></Image>
+                );
+              }
+            )}
           </div>
           <div
             className={classNames({
@@ -121,23 +147,29 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-18.svg",
-              "front-19.svg",
-              "front-20.svg",
-              "front-21.svg",
-              "front-22.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-38.svg",
+              "front-25.svg",
+              "front-16.svg",
+              "front-6.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.7;
+              }
+              return (
+                <Image
+                  key={index}
+                  style={{ opacity: opacity }}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
         </div>
         {/* // 第三行 */}
@@ -150,22 +182,31 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-18.svg",
-              "front-19.svg",
-              "front-20.svg",
-              "front-21.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-7.svg",
+              "front-10.svg",
+              "front-39.svg",
+              "front-31.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.8;
+              } else if (index == 1) {
+                opacity = 0.5;
+              }
+              return (
+                <Image
+                  key={index}
+                  style={{ opacity: opacity }}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
           <div
             className={classNames({
@@ -175,22 +216,34 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-22.svg",
+              "front-32.svg",
+              "front-35.svg",
+              "front-40.svg",
               "front-23.svg",
-              "front-24.svg",
-              "front-25.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-22.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.5;
+              } else if (index == 1) {
+                opacity = 0.3;
+              } else if (index == 3) {
+                opacity = 0.8;
+              }
+              return (
+                <Image
+                  key={index}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  style={{ opacity: opacity }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
         </div>
         {/* 第四行 */}
@@ -203,22 +256,33 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-26.svg",
-              "front-27.svg",
-              "front-28.svg",
-              "front-29.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-1.svg",
+              "front-11.svg",
+              "front-12.svg",
+              "front-18.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.3;
+              } else if (index == 1) {
+                opacity = 0.5;
+              } else if (index == 2) {
+                opacity = 0.8;
+              }
+              return (
+                <Image
+                  key={index}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  style={{ opacity: opacity }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
           <div
             className={classNames({
@@ -228,22 +292,33 @@ const AdvertiseBox: FC = (props) => {
             })}
           >
             {[
-              "front-30.svg",
-              "front-31.svg",
-              "front-32.svg",
-              "front-33.svg",
-            ].map((item, index) => (
-              <Image
-                key={index}
-                src={`/techLogo/${item}`}
-                alt=""
-                preview={{
-                  visible: false,
-                }}
-                // width={72}
-                //height={72}
-              ></Image>
-            ))}
+              "front-9.svg",
+              "front-20.svg",
+              "front-26.svg",
+              "front-24.svg",
+            ].map((item, index) => {
+              let opacity = 1;
+              if (index == 0) {
+                opacity = 0.3;
+              } else if (index == 1) {
+                opacity = 0.5;
+              } else if (index == 2) {
+                opacity = 0.8;
+              }
+              return (
+                <Image
+                  key={index}
+                  src={`/techLogo/${item}`}
+                  alt=""
+                  preview={{
+                    visible: false,
+                  }}
+                  style={{ opacity: opacity }}
+                  // width={72}
+                  //height={72}
+                ></Image>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -270,8 +345,8 @@ const AdvertiseBox: FC = (props) => {
           品生命周期管理(PLM)解决方案的优势
         </div>
         <div className={styles.advertise_box_sub_button_group}>
-          <Button type="primary">申请试用</Button>
-          <Button>视频介绍</Button>
+          <Button type="primary">申请订阅</Button>
+          <Button>观看视频</Button>
         </div>
       </div>
     </div>

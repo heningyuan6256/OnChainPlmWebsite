@@ -23,7 +23,7 @@ const Footer: FC = () => {
             请填写您的资讯内容，我们将在第一时间与您联系
           </div>
           <div>
-            <Button>申请试用</Button>
+            <Button>申请订阅</Button>
           </div>
         </div>
       </div>
